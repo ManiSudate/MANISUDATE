@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GitSharedSettings">
+    <option name="FORCE_PUSH_PROHIBITED_PATTERNS">
+      <list>
+        <option value="master" />
+      </list>
+    </option>
+  </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Persona" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/classe astratta" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/esercizi verifica" vcs="Git" />
   </component>
 </project>
