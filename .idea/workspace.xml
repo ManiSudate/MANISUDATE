@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aea3f12a-a0ad-4bfb-853a-accf5759c03e" name="Changes" comment="" />
+    <list default="true" id="aea3f12a-a0ad-4bfb-853a-accf5759c03e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +54,7 @@
     "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "kotlinNotebook"
   }
 }]]></component>
   <component name="TaskManager">
@@ -79,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763467555128</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="esercizio">
+      <option name="closed" value="true" />
+      <created>1763467633714</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763467633714</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,6 +107,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="sas" />
     <MESSAGE value="esercizio verifica" />
-    <option name="LAST_COMMIT_MESSAGE" value="esercizio verifica" />
+    <MESSAGE value="esercizio" />
+    <option name="LAST_COMMIT_MESSAGE" value="esercizio" />
   </component>
 </project>
