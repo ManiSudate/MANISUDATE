@@ -3,8 +3,8 @@ public class Pezzo {
     private float prezzoacquirente;
     private int Codice;
     private String nome;
-    private String modello;
-    private String marca;
+    String modello;
+    String marca;
 
     public Pezzo(float prezzomagazzino, float prezzoacquirente, int Codice) {
         this.prezzomagazzino = prezzomagazzino;

@@ -46,14 +46,14 @@ public class Main {
             System.out.print("Inserisci modello: ");
             String modello = in.nextLine();
             for (Pezzo p : pezzi) {
-                if (marca.equalsIgnoreCase(p.getMarca()) && modello.equalsIgnoreCase(p.getModello())) {
+                if (marca.equalsIgnoreCase(p1.getMarca())
+                        && modello.equalsIgnoreCase(p1.getModello())) {
                     trovato = p;
                     break;
                 }
             }
         }
-
-        if (trovato == null) {
+            if (trovato == null) {
             System.out.println("Pezzo non trovato");
             return;
         }
