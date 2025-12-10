@@ -5,20 +5,15 @@ public class Main {
         Scanner in = new Scanner(System.in);
 
         Pezzo p1 = new Pezzo(20f, 40f, 1001);
-        String nome1 = p1.getNome();
-        String marca1 = p1.getMarca();
-        String modello1 = p1.getModello();
-        nome1 = "Filtro olio";
-        marca1 = "Yamaha";
-        modello1 = "MT-07";
+        p1.setNome("Filtro olio");
+        p1.setMarca("Yamaha");
+        p1.setModello("MT-07");
 
         Pezzo p2 = new Pezzo(30f, 60f, 1002);
-        String nome2 = p2.getNome();
-        String marca2 = p2.getMarca();
-        String modello2 = p2.getModello();
-        nome2 = "Pastiglie freno";
-        marca2 = "Honda";
-        modello2 = "CB500";
+        p2.setNome("Pastiglie freno");
+        p2.setMarca("Honda");
+        p2.setModello("CB500");
+
 
         Pezzo[] pezzi = {p1, p2};
 
@@ -46,8 +41,8 @@ public class Main {
             System.out.print("Inserisci modello: ");
             String modello = in.nextLine();
             for (Pezzo p : pezzi) {
-                if (marca.equalsIgnoreCase(p1.getMarca())
-                        && modello.equalsIgnoreCase(p1.getModello())) {
+                if (marca.equalsIgnoreCase(p.getMarca())
+                        && modello.equalsIgnoreCase(p.getModello())) {
                     trovato = p;
                     break;
                 }
@@ -83,7 +78,7 @@ public class Main {
                 cittadino
         );
 
-        float prezzoSingoloScontato = acq.PrezzoFinale;
+        float prezzoSingoloScontato = acq.getPrezzoFinale();
         float totale = prezzoSingoloScontato * n;
 
         System.out.println("Cliente: " + cittadino);

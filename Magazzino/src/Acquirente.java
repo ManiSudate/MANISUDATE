@@ -30,5 +30,9 @@ public class Acquirente extends Pezzo {
     }
 
     float scontoeuro = (getPrezzoacquirente() * sconto) / 100;
-    float PrezzoFinale = getPrezzoacquirente() - scontoeuro;
+    public float getPrezzoFinale() {
+        float scontoeuro = (getPrezzoacquirente() * sconto) / 100;
+        return getPrezzoacquirente() - scontoeuro;
+    }
+
 }

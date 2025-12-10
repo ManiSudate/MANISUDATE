@@ -45,6 +45,11 @@ public class Pezzo {
         return Codice;
     }
 
+    public void setNome(String nome) { this.nome = nome; }
+    public void setMarca(String marca) { this.marca = marca; }
+    public void setModello(String modello) { this.modello = modello; }
+
+
     public boolean equals(Object obj) {
         return (this == obj);
     }
