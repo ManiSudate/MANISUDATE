@@ -34,18 +34,43 @@ public class Main {
             stampaTutteCartelle(cartelle);
 
             // controllo vincite generiche
-            for (int i = 0; i < numCartelle; i++) {
-                int presi = cartelle.get(i).getNumeriPresi();
-                if (presi == 2) System.out.println("AMBO sulla cartella " + (i + 1));
-                if (presi == 3) System.out.println("TERNO sulla cartella " + (i + 1));
-                if (presi == 4) System.out.println("QUATERNA sulla cartella " + (i + 1));
-                if (presi == 5) System.out.println("CINQUINA sulla cartella " + (i + 1));
-                if (presi == 15) {
-                    System.out.println("TOMBOLA sulla cartella " + (i + 1) + "!");
-                    scanner.close();
-                    return; // termina partita
+            for (int i = 0; i < cartelle.size(); i++) {
+
+                Cartelle c = cartelle.get(i);
+
+                for (int r = 0; r < 3; r++) {
+
+                    int presiRiga = c.numeriSegnatiInRiga(r);
+
+                    if (presiRiga == 2 && !c.isAmboFatto(r)) {
+                        System.out.println("AMBO sulla cartella " + (i + 1) + " riga " + (r + 1));
+                        c.setAmboFatto(r);
+                    }
+
+                    if (presiRiga == 3 && !c.isTernoFatto(r)) {
+                        System.out.println("TERNO sulla cartella " + (i + 1) + " riga " + (r + 1));
+                        c.setTernoFatto(r);
+                    }
+
+                    if (presiRiga == 4 && !c.isQuaternaFatto(r)) {
+                        System.out.println("QUATERNA sulla cartella " + (i + 1) + " riga " + (r + 1));
+                        c.setQuaternaFatto(r);
+                    }
+
+                    if (presiRiga == 5 && !c.isCinquinaFatto(r)) {
+                        System.out.println("CINQUINA sulla cartella " + (i + 1) + " riga " + (r + 1));
+                        c.setCinquinaFatto(r);
+                    }
+                }
+
+                if (c.isTombola()) {
+                    System.out.println("TOMBOLA sulla cartella " + (i + 1));
+                    return;
                 }
             }
+
+
+
         }
     }
 

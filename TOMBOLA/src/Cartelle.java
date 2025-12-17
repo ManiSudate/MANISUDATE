@@ -6,6 +6,11 @@ public class Cartelle {
     private int[][] cartella;
     private boolean[][] segnati;
     private int numeriPresi;
+    private boolean[] amboFatto;
+    private boolean[] ternoFatto;
+    private boolean[] quaternaFatto;
+    private boolean[] cinquinaFatto;
+
 
     // Codici ANSI per i colori
     private final String RESET = "\u001B[0m";
@@ -15,6 +20,11 @@ public class Cartelle {
         cartella = new int[3][9];
         segnati = new boolean[3][9];
         numeriPresi = 0;
+        amboFatto = new boolean[3];
+        ternoFatto = new boolean[3];
+        quaternaFatto = new boolean[3];
+        cinquinaFatto = new boolean[3];
+
 
         // genera numeri per ogni colonna
         ArrayList<Integer>[] colonne = new ArrayList[9];
@@ -55,9 +65,56 @@ public class Cartelle {
 
                 }
             }
-            numeriPresi=0;
         }
     }
+
+
+
+    public int numeriSegnatiInRiga(int r) {
+        int count = 0;
+        for (int c = 0; c < 9; c++) {
+            if (segnati[r][c]) count++;
+        }
+        return count;
+    }
+
+    public boolean isAmboFatto(int r) {
+        return amboFatto[r];
+    }
+
+    public boolean isTernoFatto(int r) {
+        return ternoFatto[r];
+    }
+
+    public boolean isQuaternaFatto(int r) {
+        return quaternaFatto[r];
+    }
+
+    public boolean isCinquinaFatto(int r) {
+        return cinquinaFatto[r];
+    }
+
+    public void setAmboFatto(int r) {
+        amboFatto[r] = true;
+    }
+
+    public void setTernoFatto(int r) {
+        ternoFatto[r] = true;
+    }
+
+    public void setQuaternaFatto(int r) {
+        quaternaFatto[r] = true;
+    }
+
+    public void setCinquinaFatto(int r) {
+        cinquinaFatto[r] = true;
+    }
+
+    public boolean isTombola() {
+        return numeriPresi == 15;
+    }
+
+
 
     public int getNumeriPresi() {
         return numeriPresi;
