@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Quante cartelle vuoi giocare? ");
         int numCartelle = scanner.nextInt();
-        scanner.nextLine(); // consuma l'invio
+        scanner.nextLine();
 
         ArrayList<Cartelle> cartelle = new ArrayList<>();
         for (int i = 0; i < numCartelle; i++) {
@@ -75,11 +75,10 @@ public class Main {
     }
 
     private static void stampaTutteCartelle(ArrayList<Cartelle> cartelle) {
-        // stampa tutte le cartelle una accanto all'altra
         for (int r = 0; r < 3; r++) {
             for (Cartelle c : cartelle) {
                 c.stampaRiga(r);
-                System.out.print("          "); // spazio tra cartelle
+                System.out.print("          ");
             }
             System.out.println();
         }
