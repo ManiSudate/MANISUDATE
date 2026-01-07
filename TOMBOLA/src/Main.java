@@ -31,7 +31,6 @@ public class Main {
             for (Cartelle c : cartelle) {
                 c.controllaNumero(estratto);
             }
-
             stampaTutteCartelle(cartelle);
 
             // controllo vincite generiche
