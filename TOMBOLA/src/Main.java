@@ -15,6 +15,7 @@ public class Main {
             cartelle.add(new Cartelle());
         }
 
+
         Tabellone tabellone = new Tabellone();
 
         System.out.println("\nCARTELLE GIOCATORE:");
@@ -61,6 +62,7 @@ public class Main {
                         System.out.println("CINQUINA sulla cartella " + (i + 1) + " riga " + (r + 1));
                         c.setCinquinaFatto(r);
                     }
+
                 }
 
                 if (c.isTombola()) {
