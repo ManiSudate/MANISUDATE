@@ -33,7 +33,7 @@ public class Main {
 
             stampaTutteCartelle(cartelle);
 
-
+            // controllo vincite generiche
             for (int i = 0; i < cartelle.size(); i++) {
 
                 Cartelle c = cartelle.get(i);
