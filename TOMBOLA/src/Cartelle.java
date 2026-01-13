@@ -12,7 +12,6 @@ public class Cartelle {
     private boolean[] cinquinaFatto;
 
 
-    // Codici ANSI per i colori
     private final String RESET = "\u001B[0m";
     private final String ROSSO = "\u001B[31m";
 
@@ -32,15 +31,14 @@ public class Cartelle {
             colonne[c] = new ArrayList<>();
             int start = c * 10 + 1;
             int end = (c == 8) ? 90 : start + 9;
-            if (c == 0) start = 1;
-            if (c == 0) end = 9;
+//            if (c == 0) start = 1;
+//            if (c == 0) end = 9;
             for (int i = start; i <= end; i++) {
                 colonne[c].add(i);
             }
             Collections.shuffle(colonne[c]);
         }
 
-        // assegna 5 numeri per riga
         for (int r = 0; r < 3; r++) {
             ArrayList<Integer> colConNumero = new ArrayList<>();
             while (colConNumero.size() < 5) {
@@ -120,7 +118,7 @@ public class Cartelle {
         return numeriPresi;
     }
 
-    // stampa l’intera cartella
+
     public void stampaCartella() {
         for (int r = 0; r < 3; r++) {
             stampaRiga(r);
@@ -128,7 +126,6 @@ public class Cartelle {
         }
     }
 
-    // stampa una singola riga (per stampa affiancata)
     public void stampaRiga(int r) {
         for (int j = 0; j < 9; j++) {
             if (cartella[r][j] == 0) {

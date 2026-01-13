@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -9,6 +10,8 @@ public class Main {
         System.out.print("Quante cartelle vuoi giocare? ");
         int numCartelle = scanner.nextInt();
         scanner.nextLine();
+
+
 
         ArrayList<Cartelle> cartelle = new ArrayList<>();
         for (int i = 0; i < numCartelle; i++) {
@@ -33,7 +36,6 @@ public class Main {
             }
             stampaTutteCartelle(cartelle);
 
-            // controllo vincite generiche
             for (int i = 0; i < cartelle.size(); i++) {
 
                 Cartelle c = cartelle.get(i);
