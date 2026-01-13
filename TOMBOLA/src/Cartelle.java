@@ -12,7 +12,7 @@ public class Cartelle {
     private boolean[] cinquinaFatto;
 
 
-    // Codici ANSI per i colori
+
     private final String RESET = "\u001B[0m";
     private final String ROSSO = "\u001B[31m";
 
@@ -26,7 +26,6 @@ public class Cartelle {
         cinquinaFatto = new boolean[3];
 
 
-        // genera numeri per ogni colonna
         ArrayList<Integer>[] colonne = new ArrayList[9];
         for (int c = 0; c < 9; c++) {
             colonne[c] = new ArrayList<>();
@@ -40,7 +39,6 @@ public class Cartelle {
             Collections.shuffle(colonne[c]);
         }
 
-        // assegna 5 numeri per riga
         for (int r = 0; r < 3; r++) {
             ArrayList<Integer> colConNumero = new ArrayList<>();
             while (colConNumero.size() < 5) {
@@ -120,7 +118,6 @@ public class Cartelle {
         return numeriPresi;
     }
 
-    // stampa l’intera cartella
     public void stampaCartella() {
         for (int r = 0; r < 3; r++) {
             stampaRiga(r);
@@ -128,11 +125,10 @@ public class Cartelle {
         }
     }
 
-    // stampa una singola riga (per stampa affiancata)
     public void stampaRiga(int r) {
         for (int j = 0; j < 9; j++) {
             if (cartella[r][j] == 0) {
-                System.out.print("[  ] "); // spazio più grande
+                System.out.print("[  ] ");
             } else if (segnati[r][j]) {
                 System.out.print(ROSSO + "[" + String.format("%2d", cartella[r][j]) + "] " + RESET);
             } else {
