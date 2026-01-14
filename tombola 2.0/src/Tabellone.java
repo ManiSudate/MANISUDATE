@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.Collections;
 
 public class Tabellone {
     private ArrayList<Integer> numeri;
@@ -9,11 +9,9 @@ public class Tabellone {
         for (int i = 1; i <= 90; i++) {
             numeri.add(i);
         }
+        Collections.shuffle(numeri);
     }
-
     public int estraiNumero() {
-        Random r = new Random();
-        int index = r.nextInt(numeri.size());
-        return numeri.remove(index);
+        return numeri.removeFirst();
     }
 }

@@ -10,6 +10,7 @@ public class Main {
         System.out.println("Cartella iniziale:");
         cartella.stampa();
 
+
         while (true) {
             System.out.println("Clicca Enter per estrarre un numero...");
             s.nextLine();
