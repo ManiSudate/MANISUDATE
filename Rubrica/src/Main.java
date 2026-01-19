@@ -41,7 +41,7 @@ public class Main {
                     cognome = s.nextLine();
                     System.out.print("Numero: ");
                     numero = s.nextLine();
-                    rubrica.rimuoviContatto(nome, cognome, numero);
+                    rubrica.rimuoviContatto(nome, cognome);
                     break;
                 case 4:
                     System.out.print("Nome: ");

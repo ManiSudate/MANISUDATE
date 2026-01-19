@@ -9,7 +9,7 @@ public class Rubrica {
         System.out.println();
     }
 
-    public void rimuoviContatto(String nome, String cognome, String numero) {
+    public void rimuoviContatto(String nome, String cognome) {
         for(int i = 0; i < rubrica.size(); i++) {
             if(rubrica.get(i).getNome().equalsIgnoreCase(nome)){
                 rubrica.remove(i);
