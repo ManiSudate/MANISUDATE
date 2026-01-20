@@ -17,7 +17,7 @@ public class Main {
             System.out.println("\nEstratto: " + numero);
 
             cartella.controllaNumero(numero);
-            cartella.stampa();
+            
         }
     }
 }
