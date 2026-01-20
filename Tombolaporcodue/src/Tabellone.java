@@ -1,21 +1,21 @@
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.Collections;
 
 public class Tabellone {
 
     private ArrayList<Integer> numeri;
-    private Random random;
 
     public Tabellone() {
         numeri = new ArrayList<>();
         for (int i = 1; i <= 90; i++) {
             numeri.add(i);
         }
-        random = new Random();
+        Collections.shuffle(numeri);
     }
 
     public int estraiNumero() {
-        int index = random.nextInt(numeri.size());
-        return numeri.remove(index);
+        int numero = numeri.getFirst();
+        numeri.removeFirst();
+        return numero;
     }
 }
