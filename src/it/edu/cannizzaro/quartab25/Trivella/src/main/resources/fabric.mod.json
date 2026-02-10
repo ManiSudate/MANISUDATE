@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "trivella",
+	"version": "${version}",
+	"name": "Trivella",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/trivella/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.trivella.Trivella"
+		],
+		"client": [
+			"net.trivella.TrivellaClient"
+		]
+	},
+	"mixins": [
+		"trivella.mixins.json",
+		{
+			"config": "trivella.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.3",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
