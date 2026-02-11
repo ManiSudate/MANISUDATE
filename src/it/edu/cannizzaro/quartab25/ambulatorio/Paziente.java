@@ -14,5 +14,8 @@ public class Paziente extends Persona {
         setDataNascita(dataNascita);
     }
 
-
+    @Override
+    public String toString() {
+        return getNome();
+    }
 }
