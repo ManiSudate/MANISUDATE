@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.magazzino;
 public class Acquirente extends Pezzo {
     int identificativo;
     int sconto;

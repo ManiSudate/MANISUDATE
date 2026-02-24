@@ -3,18 +3,78 @@ public class Prenotazione {
     Paziente paziente;
     Medico medico;
     String orario;
-    String persona;
+    String data;
     boolean effettuata;
-    String noteVisita;
+    String note;
 
-    public Prenotazione(Paziente paziente, Medico medico, String orario, String persona, boolean effettuata, String noteVisita){
 
+    public Prenotazione(){
+        this.effettuata = false;
+        this.note = "";
     }
 
-    public void setOrario(String orario){
-        this.orario = orario;
+
+    public void setPaziente(Paziente paziente){
+        this.paziente = paziente;
     }
-    public void setPersona(String persona){
-        this.persona = persona;
+    public Paziente getPaziente() {
+        return paziente;
     }
+
+
+
+    public void setMedico(Medico medico) {
+        this.medico = medico;
+    }
+    public Medico getMedico() {
+        return medico;
+    }
+
+
+
+    public String getData() {
+        return data;
+    }
+    public void setData(String data) {
+        this.data = data;
+    }
+
+
+    public String getOrario() {
+        return orario;
+    }
+
+    public void setOrario(String ora) {
+        this.orario = ora;
+    }
+
+
+
+    public boolean isEffettuata() {
+        return effettuata;
+    }
+    public void setEffettuata(boolean effettuata){
+        this.effettuata = true;
+    }
+
+
+
+    public void setNoteVisita(String note) {
+        this.note = note;
+    }
+    public String getNoteVisita(){
+        return note;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Paziente: " + paziente +
+                ", Data: " + data +
+                ", Ora: " + orario +
+                ", Effettuata: " + (effettuata ? "SI" : "NO") +
+                (note.isEmpty() ? "" : ", Note: " + note);
+    }
+
 }

@@ -1,6 +1,7 @@
 package it.edu.cannizzaro.quartab25.persona;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -19,9 +20,13 @@ public class Main {
 
         System.out.print("Inserisci la data di nascita (formato YYYY-MM-DD): ");
         String dataNascitaStr = scanner.nextLine();
-        LocalDate dataNascita = LocalDate.parse(dataNascitaStr);
+        LocalDate localDate = LocalDate.parse(dataNascitaStr);
 
-        // Crea oggetto com.fil.lib.Persona e imposta i valori
+        Date dataNascita = Date.from(
+                localDate.atStartOfDay(java.time.ZoneId.systemDefault()).toInstant()
+        );
+
+
         Persona persona = new Persona();
         persona.setNome(nome);
         persona.setCognome(cognome);

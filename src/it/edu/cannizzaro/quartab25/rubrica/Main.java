@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.rubrica;
 import java.util.Scanner;
 
 public class Main {

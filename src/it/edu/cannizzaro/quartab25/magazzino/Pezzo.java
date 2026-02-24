@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.magazzino;
 public class Pezzo {
     private float prezzomagazzino;
     private float prezzoacquirente;

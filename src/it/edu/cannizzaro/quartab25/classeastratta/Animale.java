@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.classeastratta;
 // Classe astratta
 public abstract class Animale {
     public abstract void emettiSuono(); // metodo astratto

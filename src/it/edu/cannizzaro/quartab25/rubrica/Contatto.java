@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.rubrica;
 public class Contatto {
     public String nome;
     public String cognome;

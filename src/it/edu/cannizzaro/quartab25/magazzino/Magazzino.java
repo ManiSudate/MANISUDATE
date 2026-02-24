@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.magazzino;
 public class Magazzino extends Pezzo {
     double guadagno;
     double spesa;

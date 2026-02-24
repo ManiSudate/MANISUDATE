@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.rubrica;
 import java.util.ArrayList;
 
 public class Rubrica {

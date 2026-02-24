@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.tombolaporcodue;
 import java.util.Scanner;
 
 public class Main {

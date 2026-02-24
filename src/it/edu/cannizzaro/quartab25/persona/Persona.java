@@ -1,12 +1,13 @@
 package it.edu.cannizzaro.quartab25.persona;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Date;
 
 public class Persona {
     private String nome;
     private String cognome;
     private String sesso;
-    private LocalDate dataNascita;
+    private Date dataNascita;
 
     // Metodi setter
     public void setNome(String nome) {
@@ -24,14 +25,21 @@ public class Persona {
         this.sesso = sesso;
     }
 
-    public void setDataNascita(LocalDate dataNascita) {
+    public void setDataNascita(Date dataNascita) {
         this.dataNascita = dataNascita;
     }
 
     // Metodo per calcolare l'età
     public int calcolaEta() {
+
         LocalDate oggi = LocalDate.now();
-        return Period.between(dataNascita, oggi).getYears();
+
+        LocalDate nascita = dataNascita
+                .toInstant()
+                .atZone(java.time.ZoneId.systemDefault())
+                .toLocalDate();
+
+        return Period.between(nascita, oggi).getYears();
     }
 
     // Metodo per stampare i dati

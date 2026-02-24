@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.magazzino;
 public class Cittadino {
     private String nome;
     private String cognome;

@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.tombolaporcodue;
 public class Casella {
     private int numero;
     private boolean uscita;

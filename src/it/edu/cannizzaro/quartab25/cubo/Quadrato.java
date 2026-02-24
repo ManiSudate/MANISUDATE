@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.cubo;
 public class Quadrato {
     protected double lato;
 
