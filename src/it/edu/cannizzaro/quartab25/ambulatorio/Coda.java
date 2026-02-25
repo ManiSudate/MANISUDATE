@@ -24,7 +24,7 @@ public class Coda <t>{
         int i=0;
         for (t obj : lista){
             i++;
-            System.out.println(" "+ obj+i);
+            System.out.println(" "+ obj+i+" ");
         }
     }
 }

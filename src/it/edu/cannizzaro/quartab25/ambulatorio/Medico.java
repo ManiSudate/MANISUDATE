@@ -1,37 +1,33 @@
 package it.edu.cannizzaro.quartab25.ambulatorio;
-import it.edu.cannizzaro.quartab25.persona.Persona;
 
-import java.util.Queue;
 
-public class Medico extends Persona {
+public class Medico {
     String specializzazione;
-    boolean effettuata;
+    String nome;
+    String cognome;
 
-    Queue<Paziente> listaPrenotazioni;
+    private Coda<Prenotazione> prenotazioni = new Coda<>();
 
     public Medico(String nome, String cognome, String specializzazione){
         this.specializzazione = specializzazione;
-        super(nome,cognome);
+        this.nome = nome;
+        this.cognome = cognome;
     }
-    public String getNome(){
-        return nome;
-    }
-    public String getFullName(){
+    public String getName(){
         return nome+" "+cognome;
     }
     public String getSpecializzazione(){
         return specializzazione;
     }
-
-
-    public void aggiungiPrenotazione(Prenotazione p){
+    public void aggiungiPrenotazione(Prenotazione p) {
+        prenotazioni.aggiungiCoda(p);
+    }
+    public Prenotazione prossimaVisita() {
+        return prenotazioni.getPrimoFila();
     }
 
-    public void vediPrenotazioni(){
-    }
-
-    public void setEffettuata(boolean effettuata){
-        this.effettuata = true;
+    public void visualizzaPrenotazioni() {
+        prenotazioni.stampa();
     }
 
 }

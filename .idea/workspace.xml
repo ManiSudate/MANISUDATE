@@ -5,78 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b924759-5054-474e-be8c-a33976470c55" name="Changes" comment="ambulatorio">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Clasee/Classe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Clasee/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/classe/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Clasee/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/classe/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Clasee/Studente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/classe/Studente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Giorno/Giorno.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Giorno/Giorno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/giorno/Giorno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/.gradle/9.2.1/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/.gradle/9.2.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/.gradle/9.2.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/.gradle/9.2.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/.gradle/9.2.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/src/client/java/net/trivella/TrivellaClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/src/client/java/net/trivella/mixin/client/ExampleClientMixin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/src/client/resources/trivella.client.mixins.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/src/main/java/net/trivella/Trivella.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/src/main/java/net/trivella/mixin/ExampleMixin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/src/main/resources/assets/trivella/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/src/main/resources/fabric.mod.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/Trivella/src/main/resources/trivella.mixins.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Medico.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Medico.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Paziente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Paziente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Prenotazione.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Prenotazione.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Segretaria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Coda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Coda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Medico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Medico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Paziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Paziente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Prenotazione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Prenotazione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Segretaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Segretaria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/classeastratta/Animale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/classeastratta/Animale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/classeastratta/Cane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/classeastratta/Cane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/classeastratta/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/classeastratta/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/cubo/Cubo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/cubo/Cubo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/cubo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/cubo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/cubo/Parallelepipedo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/cubo/Parallelepipedo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/cubo/Quadrato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/cubo/Quadrato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/cubo/Rettangolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/cubo/Rettangolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/eserciziverifica/Esercizio1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/eserciziverifica/Esercizio2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/eserciziverifica/Esercizio3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/eserciziverifica/Libro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/magazzino/Acquirente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/magazzino/Acquirente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/magazzino/Cittadino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/magazzino/Cittadino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/magazzino/Colors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/magazzino/Colors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/magazzino/Magazzino.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/magazzino/Magazzino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/magazzino/Magazzino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/magazzino/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/magazzino/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/magazzino/Pezzo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/magazzino/Pezzo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/persona/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/persona/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/persona/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/persona/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/programmaverifica/Bicicletta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/programmaverifica/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/programmaverifica/Motocicletta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/programmaverificab/Automobile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/programmaverificab/Carro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/programmaverificab/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/rubrica/Contatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/rubrica/Contatto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/rubrica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/rubrica/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/rubrica/Rubrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/rubrica/Rubrica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/sas/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/sas/Persona.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/tombolaporcodue/Cartella.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/tombolaporcodue/Cartella.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/tombolaporcodue/Casella.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/tombolaporcodue/Casella.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/tombolaporcodue/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/tombolaporcodue/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/tombolaporcodue/Tabellone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/tombolaporcodue/Tabellone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Segretaria.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,29 +50,35 @@
     <commands />
     <urls />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="39TgWQ4l2q6qMVFbtc9mmJ3IF81" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/filippo.licocci/Documents/projects/JAVA&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.20344828&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/filippo.licocci/Documents/projects/JAVA",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.20344828"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="it.edu.cannizzaro.quartab25.AMBULATORIO" />
@@ -140,7 +87,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
       </set>
     </attachedChunks>
   </component>

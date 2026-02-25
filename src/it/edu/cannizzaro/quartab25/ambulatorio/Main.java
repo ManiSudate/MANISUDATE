@@ -1,20 +1,22 @@
 package it.edu.cannizzaro.quartab25.ambulatorio;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws ParseException {
+
+    public static void main(String[] args) {
+
         Scanner s = new Scanner(System.in);
 
-        Medico m1 = new Medico("Younan", "Nowzaradan", "Chirurgia vascolare");
-        Medico m2 = new Medico("Umberto", "Veronesi", "Oncologo");
-        Medico m3 = new Medico("Anthony", "Fauci", "Malattie infettive");
+        List<Medico> medici = new ArrayList<>();
+
+        medici.add(new Medico("Younan", "Nowzaradan", "Chirurgia vascolare"));
+        medici.add(new Medico("Umberto", "Veronesi", "Oncologo"));
+        medici.add(new Medico("Anthony", "Fauci", "Malattie infettive"));
 
         int scelta;
-        SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy");
-        String data;
-
 
         do {
             System.out.println("\n--- POLIAMBULATORIO ---");
@@ -26,55 +28,127 @@ public class Main {
             s.nextLine();
 
             switch (scelta) {
+
                 case 1:
-                    Paziente p = new Paziente();
-                    System.out.print("Nome paziente: ");
-                    p.setNome(s.nextLine());
 
-                    System.out.print("Cognome paziente: ");
-                    p.setCognome(s.nextLine());
+                    String continua1;
 
-                    System.out.print("Sesso: ");
-                    p.setSesso(s.nextLine());
+                    do {
+                        Paziente p = new Paziente();
 
-                    System.out.print("Data di nascita: ");
-                    data = s.nextLine();
-                    p.setDataNascita(sd.parse(data));
+                        System.out.print("Nome paziente: ");
+                        p.setNome(s.nextLine());
 
-                    System.out.println("1) " + m1.getNome() + " - " + m1.getSpecializzazione());
-                    System.out.println("2) " + m2.getNome() + " - " + m2.getSpecializzazione());
-                    System.out.println("3) " + m3.getNome() + " - " + m3.getSpecializzazione());
-                    System.out.print("Scegli il medico: ");
-                    int sceltamedico = s.nextInt();
-                    s.nextLine();
+                        System.out.print("Cognome paziente: ");
+                        p.setCognome(s.nextLine());
 
-                    Medico medicoscelto = null;
+                        System.out.print("Sesso: ");
+                        p.setSesso(s.nextLine());
 
-                    if (sceltamedico == 1) medicoscelto = m1;
-                    if (sceltamedico == 2) medicoscelto = m2;
-                    if (sceltamedico == 3) medicoscelto = m3;
+                        System.out.print("Data di nascita: ");
+                        p.setDataNascita(s.nextLine());
 
-                    Prenotazione prenotazione = new Prenotazione();
+                        System.out.println("\nScegli il medico:");
+                        for (int i = 0; i < medici.size(); i++) {
+                            System.out.println((i + 1) + ") " +
+                                    medici.get(i).getName() + " - " +
+                                    medici.get(i).getSpecializzazione());
+                        }
 
-                    prenotazione.setPaziente(p);
-                    prenotazione.setMedico(medicoscelto);
+                        System.out.print("Numero: ");
+                        int sceltamedico = s.nextInt();
+                        s.nextLine();
 
-                    System.out.print("Data: ");
-                    prenotazione.setData(s.nextLine());
+                        if (sceltamedico < 1 || sceltamedico > medici.size()) {
+                            System.out.println("Medico non valido.");
+                            break;
+                        }
 
-                    System.out.print("Orario: ");
-                    prenotazione.setOrario(s.nextLine());
+                        Medico medicoscelto = medici.get(sceltamedico - 1);
 
-                    medicoscelto.aggiungiPrenotazione(prenotazione);
+                        Prenotazione prenotazione = new Prenotazione();
 
-                    System.out.println("Prenotazione aggiunta!");
+                        prenotazione.setPaziente(p);
+                        prenotazione.setMedico(medicoscelto);
+
+                        System.out.print("Data visita: ");
+                        prenotazione.setData(s.nextLine());
+
+                        System.out.print("Orario visita: ");
+                        prenotazione.setOrario(s.nextLine());
+
+                        medicoscelto.aggiungiPrenotazione(prenotazione);
+
+                        System.out.println("Prenotazione aggiunta!");
+
+                        System.out.print("Vuoi inserire un altro appuntamento? (s/n): ");
+                        continua1 = s.nextLine();
+
+                    } while (continua1.equalsIgnoreCase("s"));
+
                     break;
 
+                case 2:
 
+                    String continua2;
 
+                    do {
+                        System.out.println("\nChi sei?");
+                        for (int i = 0; i < medici.size(); i++) {
+                            System.out.println((i + 1) + ") " +
+                                    medici.get(i).getName());
+                        }
+
+                        System.out.print("Numero: ");
+                        int idmedico = s.nextInt();
+                        s.nextLine();
+
+                        if (idmedico < 1 || idmedico > medici.size()) {
+                            System.out.println("Medico non valido.");
+                            break;
+                        }
+
+                        Medico medico = medici.get(idmedico - 1);
+
+                        System.out.println("\nPrenotazioni in coda:");
+                        medico.visualizzaPrenotazioni();
+
+                        System.out.print("Effettuare la prossima visita? (s/n): ");
+                        String risposta = s.nextLine();
+
+                        if (risposta.equalsIgnoreCase("s")) {
+
+                            Prenotazione visita = medico.prossimaVisita();
+
+                            if (visita != null) {
+                                visita.setEffettuata(true);
+
+                                System.out.print("Note visita: ");
+                                visita.setNote(s.nextLine());
+
+                                System.out.println("Visita completata.");
+                            } else {
+                                System.out.println("Nessuna prenotazione.");
+                            }
+                        }
+
+                        System.out.print("Vuoi continuare? (s/n): ");
+                        continua2 = s.nextLine();
+
+                    } while (continua2.equalsIgnoreCase("s"));
+
+                    break;
+
+                case 0:
+                    System.out.println("Uscita dal programma.");
+                    break;
+
+                default:
+                    System.out.println("Scelta non valida.");
             }
-        }while (scelta != 0);
+
+        } while (scelta != 0);
+
+        s.close();
     }
 }
-
-

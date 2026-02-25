@@ -13,7 +13,6 @@ public class Prenotazione {
         this.note = "";
     }
 
-
     public void setPaziente(Paziente paziente){
         this.paziente = paziente;
     }
@@ -21,15 +20,12 @@ public class Prenotazione {
         return paziente;
     }
 
-
-
     public void setMedico(Medico medico) {
         this.medico = medico;
     }
     public Medico getMedico() {
         return medico;
     }
-
 
 
     public String getData() {
@@ -58,11 +54,10 @@ public class Prenotazione {
     }
 
 
-
-    public void setNoteVisita(String note) {
+    public void setNote(String note) {
         this.note = note;
     }
-    public String getNoteVisita(){
+    public String getNote(){
         return note;
     }
 

@@ -1,20 +1,33 @@
 package it.edu.cannizzaro.quartab25.ambulatorio;
-import it.edu.cannizzaro.quartab25.persona.Persona;
 
-import java.time.LocalDate;
 import java.util.Date;
 
-public class Paziente extends Persona {
+public class Paziente{
     String nome;
     String cognome;
     String sesso;
-    Date dataNascita;
+    String dataNascita;
 
     public Paziente(){
-        setNome(nome);
-        setCognome(cognome);
-        setSesso(sesso);
-        setDataNascita(dataNascita);
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getNome(){
+        return "Nome: "+nome+"Cognome: "+cognome;
+    }
+
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+
+    public void setSesso(String sesso) {
+        this.sesso = sesso;
+    }
+
+    public void setDataNascita(String dataNascita) {
+        this.dataNascita = dataNascita;
     }
     @Override
     public String toString() {
