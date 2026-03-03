@@ -1,20 +1,43 @@
 package it.edu.cannizzaro.quartab25.ambulatorio;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    private static final String FILE_PRENOTAZIONI = "prenotazioni.dat";
 
+    public static void salvaPrenotazioni(List<Medico> medici) {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FILE_PRENOTAZIONI))) {
+            out.writeObject(new ArrayList<>(medici));
+            System.out.println("Prenotazioni salvate!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static ArrayList<Medico> caricaPrenotazioni() {
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(FILE_PRENOTAZIONI))) {
+            return (ArrayList<Medico>) in.readObject();
+        } catch (Exception e) {
+            return new ArrayList<>();
+        }
+    }
+
+    public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
 
-        List<Medico> medici = new ArrayList<>();
+        ArrayList<Medico> medici = caricaPrenotazioni();
 
-        medici.add(new Medico("Younan", "Nowzaradan", "Chirurgia vascolare"));
-        medici.add(new Medico("Umberto", "Veronesi", "Oncologo"));
-        medici.add(new Medico("Anthony", "Fauci", "Malattie infettive"));
+        if (medici.isEmpty()) {
+            medici.add(new Medico("Younan", "Nowzaradan", "Chirurgia vascolare"));
+            medici.add(new Medico("Umberto", "Veronesi", "Oncologo"));
+            medici.add(new Medico("Anthony", "Fauci", "Malattie infettive"));
+            salvaPrenotazioni(medici);
+        }
 
         int scelta;
 
@@ -30,9 +53,7 @@ public class Main {
             switch (scelta) {
 
                 case 1:
-
                     String continua1;
-
                     do {
                         Paziente p = new Paziente();
 
@@ -67,7 +88,6 @@ public class Main {
                         Medico medicoscelto = medici.get(sceltamedico - 1);
 
                         Prenotazione prenotazione = new Prenotazione();
-
                         prenotazione.setPaziente(p);
                         prenotazione.setMedico(medicoscelto);
 
@@ -79,19 +99,18 @@ public class Main {
 
                         medicoscelto.aggiungiPrenotazione(prenotazione);
 
-                        System.out.println("Prenotazione aggiunta!");
+                        salvaPrenotazioni(medici);
+
+                        System.out.println("Prenotazione aggiunta e salvata!");
 
                         System.out.print("Vuoi inserire un altro appuntamento? (s/n): ");
                         continua1 = s.nextLine();
 
                     } while (continua1.equalsIgnoreCase("s"));
-
                     break;
 
-                case 2:
-
+                case 2: // Medico
                     String continua2;
-
                     do {
                         System.out.println("\nChi sei?");
                         for (int i = 0; i < medici.size(); i++) {
@@ -117,16 +136,12 @@ public class Main {
                         String risposta = s.nextLine();
 
                         if (risposta.equalsIgnoreCase("s")) {
-
                             Prenotazione visita = medico.prossimaVisita();
-
                             if (visita != null) {
                                 visita.setEffettuata(true);
-
-                                System.out.print("Note visita: ");
-                                visita.setNote(s.nextLine());
-
                                 System.out.println("Visita completata.");
+
+                                salvaPrenotazioni(medici);
                             } else {
                                 System.out.println("Nessuna prenotazione.");
                             }
@@ -136,7 +151,6 @@ public class Main {
                         continua2 = s.nextLine();
 
                     } while (continua2.equalsIgnoreCase("s"));
-
                     break;
 
                 case 0:
@@ -146,7 +160,6 @@ public class Main {
                 default:
                     System.out.println("Scelta non valida.");
             }
-
         } while (scelta != 0);
 
         s.close();

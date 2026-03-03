@@ -29,7 +29,6 @@ public class Persona {
         this.dataNascita = dataNascita;
     }
 
-    // Metodo per calcolare l'età
     public int calcolaEta() {
 
         LocalDate oggi = LocalDate.now();

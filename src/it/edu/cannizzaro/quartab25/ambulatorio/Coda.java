@@ -1,7 +1,8 @@
 package it.edu.cannizzaro.quartab25.ambulatorio;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Coda <t>{
+public class Coda <t> implements Serializable {
     private ArrayList<t> lista = new ArrayList<>();
 
     public Coda(ArrayList<t>lista){
@@ -24,7 +25,7 @@ public class Coda <t>{
         int i=0;
         for (t obj : lista){
             i++;
-            System.out.println(" "+ obj+i+" ");
+            System.out.println(" "+ obj+" ");
         }
     }
 }

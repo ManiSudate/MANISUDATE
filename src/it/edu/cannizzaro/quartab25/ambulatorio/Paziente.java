@@ -1,8 +1,9 @@
 package it.edu.cannizzaro.quartab25.ambulatorio;
 
-import java.util.Date;
 
-public class Paziente{
+import java.io.Serializable;
+
+public class Paziente implements Serializable {
     String nome;
     String cognome;
     String sesso;
@@ -29,8 +30,9 @@ public class Paziente{
     public void setDataNascita(String dataNascita) {
         this.dataNascita = dataNascita;
     }
+
     @Override
     public String toString() {
-        return getNome();
+        return nome + " " + cognome + ", Sesso: " + sesso + ", Data di nascita: " + dataNascita;
     }
 }

@@ -1,5 +1,8 @@
 package it.edu.cannizzaro.quartab25.ambulatorio;
-public class Prenotazione {
+
+import java.io.Serializable;
+
+public class Prenotazione implements Serializable {
     Paziente paziente;
     Medico medico;
     String orario;
@@ -65,11 +68,8 @@ public class Prenotazione {
 
     @Override
     public String toString() {
-        return "Paziente: " + paziente +
-                ", Data: " + data +
-                ", Ora: " + orario +
-                ", Effettuata: " + (effettuata ? "SI" : "NO") +
-                (note.isEmpty() ? "" : ", Note: " + note);
+        return "Paziente: " + paziente + ", Data: " + data + ", Ora: " + orario +
+                ", Effettuata: " + (effettuata ? "SI" : "NO");
     }
 
 }

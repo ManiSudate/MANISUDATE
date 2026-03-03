@@ -1,7 +1,8 @@
 package it.edu.cannizzaro.quartab25.ambulatorio;
 
+import java.io.Serializable;
 
-public class Medico {
+public class Medico implements Serializable {
     String specializzazione;
     String nome;
     String cognome;
