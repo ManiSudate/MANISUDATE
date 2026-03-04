@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b924759-5054-474e-be8c-a33976470c55" name="Changes" comment="ambulatorio">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/google_code_gson.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Coda.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Coda.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Medico.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Medico.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Paziente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Paziente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Prenotazione.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Prenotazione.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/magazzino/Magazzino.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/persona/Persona.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/persona/Persona.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prenotazioni.dat" beforeDir="false" afterPath="$PROJECT_DIR$/prenotazioni.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Coda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Coda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Medico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Medico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Paziente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Paziente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Prenotazione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Prenotazione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/persona/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/persona/Persona.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +35,18 @@
     &quot;assignee&quot;: &quot;ManiSudate&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ManiSudate/MANISUDATE.git",
-    "accountId": "6e888d40-84d9-4bf4-a402-4163ffe86257"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:ManiSudate/MANISUDATE.git&quot;,
+    &quot;accountId&quot;: &quot;968fdf68-c57e-4ec6-9433-9d3ca21b301c&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="AISelfReview" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -63,29 +58,23 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/filippo.licocci/Documents/projects/JAVA&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.20344828&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.preview.features.used": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/filippo.licocci/Documents/projects/JAVA",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.20344828"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="it.edu.cannizzaro.quartab25.AMBULATORIO" />
@@ -94,7 +83,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
       </set>
     </attachedChunks>
   </component>

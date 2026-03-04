@@ -1,14 +1,11 @@
 package it.edu.cannizzaro.quartab25.ambulatorio;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-
     private static final String FILE_PRENOTAZIONI = "prenotazioni.dat";
-
     public static void salvaPrenotazioni(List<Medico> medici) {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FILE_PRENOTAZIONI))) {
             out.writeObject(new ArrayList<>(medici));
@@ -17,8 +14,6 @@ public class Main {
             e.printStackTrace();
         }
     }
-
-
     public static ArrayList<Medico> caricaPrenotazioni() {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(FILE_PRENOTAZIONI))) {
             return (ArrayList<Medico>) in.readObject();
@@ -26,10 +21,8 @@ public class Main {
             return new ArrayList<>();
         }
     }
-
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-
         ArrayList<Medico> medici = caricaPrenotazioni();
 
         if (medici.isEmpty()) {
@@ -38,9 +31,7 @@ public class Main {
             medici.add(new Medico("Anthony", "Fauci", "Malattie infettive"));
             salvaPrenotazioni(medici);
         }
-
         int scelta;
-
         do {
             System.out.println("\n--- POLIAMBULATORIO ---");
             System.out.println("1) Segreteria");
@@ -109,7 +100,7 @@ public class Main {
                     } while (continua1.equalsIgnoreCase("s"));
                     break;
 
-                case 2: // Medico
+                case 2:
                     String continua2;
                     do {
                         System.out.println("\nChi sei?");
@@ -140,7 +131,6 @@ public class Main {
                             if (visita != null) {
                                 visita.setEffettuata(true);
                                 System.out.println("Visita completata.");
-
                                 salvaPrenotazioni(medici);
                             } else {
                                 System.out.println("Nessuna prenotazione.");
@@ -161,7 +151,5 @@ public class Main {
                     System.out.println("Scelta non valida.");
             }
         } while (scelta != 0);
-
-        s.close();
     }
 }

@@ -1,6 +1,4 @@
 package it.edu.cannizzaro.quartab25.ambulatorio;
-
-
 import java.io.Serializable;
 
 public class Paziente implements Serializable {
@@ -9,8 +7,7 @@ public class Paziente implements Serializable {
     String sesso;
     String dataNascita;
 
-    public Paziente(){
-    }
+    public Paziente(){}
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -18,15 +15,12 @@ public class Paziente implements Serializable {
     public String getNome(){
         return "Nome: "+nome+"Cognome: "+cognome;
     }
-
     public void setCognome(String cognome) {
         this.cognome = cognome;
     }
-
     public void setSesso(String sesso) {
         this.sesso = sesso;
     }
-
     public void setDataNascita(String dataNascita) {
         this.dataNascita = dataNascita;
     }

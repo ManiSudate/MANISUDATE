@@ -1,5 +1,4 @@
 package it.edu.cannizzaro.quartab25.ambulatorio;
-
 import java.io.Serializable;
 
 public class Medico implements Serializable {
@@ -17,16 +16,13 @@ public class Medico implements Serializable {
     public String getName(){
         return nome+" "+cognome;
     }
-    public String getSpecializzazione(){
-        return specializzazione;
-    }
+    public String getSpecializzazione(){return specializzazione;}
     public void aggiungiPrenotazione(Prenotazione p) {
         prenotazioni.aggiungiCoda(p);
     }
     public Prenotazione prossimaVisita() {
         return prenotazioni.getPrimoFila();
     }
-
     public void visualizzaPrenotazioni() {
         prenotazioni.stampa();
     }
