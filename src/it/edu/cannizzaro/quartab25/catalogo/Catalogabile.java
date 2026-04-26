@@ -4,8 +4,5 @@ public interface Catalogabile {
     String getTitolo();
     String getCodice();
     String getAnno();
-    String getPrezzo();
-
-
-    
+    String getPrezzo(); 
 }
