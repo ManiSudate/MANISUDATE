@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.catalogo;
 public class BST<T extends Comparable<T>&Catalogabile> {
     private class Nodo<T> {
         T valore;

@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.catalogo;
 public class ElementoCatalogo implements Catalogabile, Comparable<ElementoCatalogo> {
     private String codice;
     private String titolo;

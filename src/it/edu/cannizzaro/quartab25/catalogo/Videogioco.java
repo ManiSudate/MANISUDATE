@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.catalogo;
 public class Videogioco extends ElementoCatalogo {
     private String piattaforma;
 

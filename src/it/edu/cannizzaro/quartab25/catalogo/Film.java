@@ -1,3 +1,4 @@
+package it.edu.cannizzaro.quartab25.catalogo;
 public class Film extends ElementoCatalogo {
     private String regista;
 
