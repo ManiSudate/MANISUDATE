@@ -4,6 +4,7 @@ public class Main {
     static BST<ElementoCatalogo> catalogo = new BST<>();
     public static void main(String[] args) {
         popolaLista();
+        catalogo.caricaCSV();
         menu();
     }
     public static void menu(){
@@ -15,6 +16,7 @@ public class Main {
             System.out.println("1. Aggiungi elemento");
             System.out.println("2. Cerca elemento");
             System.out.println("3. Visualizza catalogo");
+            System.out.println("4. Salva catalogo in CSV");
             System.out.println("0. Esci");
             System.out.print("Scelta: ");
             scelta = s.nextInt();
@@ -76,9 +78,14 @@ public class Main {
                 case 3:
                     catalogo.visualizza();
                     break;
+
+                case 4:
+                    catalogo.salvaCSV("catalogo.csv");
+                    System.out.println("Catalogo salvato con successo in catalogo.csv!");
+                    break;
             }
         }
-
+        s.close();
     }
     public static void popolaLista(){
         catalogo.inserisci(new Libro("L01","Il Nome della Rosa", "1980","24.99", "Umberto Eco"));

@@ -16,4 +16,9 @@ public class Film extends ElementoCatalogo {
         System.out.println("Codice: "+ codice + "\n"+ "Titolo: " + titolo +"\n"+ "Anno: "+ anno + "\n"+"Prezzo: "+ prezzo+"\n"+"Regista: "+regista+"\n");
     }
 
+    @Override
+    public String printCSV() {
+        return super.printCSV() + ", \"" + regista + "\"";
+    }
+
 }

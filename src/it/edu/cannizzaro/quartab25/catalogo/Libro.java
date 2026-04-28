@@ -16,4 +16,9 @@ public class Libro extends ElementoCatalogo {
         System.out.println("Codice: "+ codice + "\n"+ "Titolo: " + titolo +"\n"+ "Anno: "+ anno + "\n"+"Prezzo: "+ prezzo+"\n"+"Autore: "+autore+"\n");
     }
 
+    @Override
+    public String printCSV() {
+        return super.printCSV() + ", \"" + autore + "\"";
+    }
+
 }

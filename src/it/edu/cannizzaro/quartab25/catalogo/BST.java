@@ -84,7 +84,63 @@ public class BST<T extends Comparable<T> & Catalogabile & ToCSV> {
     }
 
     public void caricaCSV(){
+        try {
+            FileReader f= new FileReader("catalogo.CSV");
+            BufferedReader fIN=new BufferedReader(f);
 
+            String s;
+            s=fIN.readLine();
+            int i = 0;
+            while(s!=null){
+                String[] splitArray =s.split(",");
+                for(String string:splitArray){
+                    splitArray[i++]=string.replace("\"","").trim();
+                }
+                String tipo = splitArray[0];
+                switch (tipo){
+                    case "Libro":
+                        Libro libro= new Libro(splitArray[1],splitArray[2],splitArray[3],splitArray[4],splitArray[5]);
+                        inserisci((T) libro);
+                        break;
+                    case "Film":
+                        Film film= new Film(splitArray[1],splitArray[2],splitArray[3],splitArray[4],splitArray[5]);
+                        inserisci((T) film);
+                        break;
+                    case "Videogioco":
+                        Videogioco videogioco = new Videogioco(splitArray[1],splitArray[2],splitArray[3],splitArray[4],splitArray[5]);
+                        inserisci((T) videogioco);
+                        break;
+                    default:
+                        break;
+                }
+
+                s=fIN.readLine();
+                i = 0;
+            }
+            f.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void salvaCSV(String nomeFile) {
+    
+        try (PrintWriter writer = new PrintWriter(new FileWriter(nomeFile))) {
+            writer.write("\"tipo\", \"titolo\", \"anno di pubblicazione\", \"id\", \"autore/produttore/regista\"");
+            salvaCSVRicorsivo(radice, writer);
+            
+        } catch (IOException e) {
+            System.out.println("Errore durante il salvataggio del file: " + e.getMessage());
+        }
+    }
+
+    private void salvaCSVRicorsivo(Nodo<T> nodo, PrintWriter writer) {
+        if (nodo == null) {
+            return;
+        }
+        salvaCSVRicorsivo(nodo.sinistra, writer);
+        writer.println(nodo.valore.printCSV());
+        salvaCSVRicorsivo(nodo.destra, writer);
     }
 
 }

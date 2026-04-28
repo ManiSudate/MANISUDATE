@@ -1,5 +1,5 @@
 package it.edu.cannizzaro.quartab25.catalogo;
-public class ElementoCatalogo implements Catalogabile, Comparable<ElementoCatalogo> {
+public class ElementoCatalogo implements Catalogabile, Comparable<ElementoCatalogo>, ToCSV {
     String codice;
     String titolo;
     String anno;
@@ -11,6 +11,9 @@ public class ElementoCatalogo implements Catalogabile, Comparable<ElementoCatalo
         this.anno = anno;
         this.prezzo = prezzo;
     }
+
+
+    public String printCSV(){return "\""+this.getClass().getSimpleName()+"\","+"\""  +titolo+"\", "+anno+", "+prezzo+", "+codice;}
     
 
     @Override
