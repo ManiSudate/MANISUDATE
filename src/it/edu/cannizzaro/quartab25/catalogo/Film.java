@@ -12,9 +12,8 @@ public class Film extends ElementoCatalogo {
     }
 
     @Override
-    public String stampaEtichetta() {
-        return "Codice: " + getCodice() + " Titolo: " + getTitolo() + " Anno: "
-                + getAnno() + " Prezzo: " + getPrezzo() + " Regista: " + regista;
+    public void stampaEtichetta() {
+        System.out.println("Codice: "+ codice + "\n"+ "Titolo: " + titolo +"\n"+ "Anno: "+ anno + "\n"+"Prezzo: "+ prezzo+"\n"+"Regista: "+regista+"\n");
     }
 
 }

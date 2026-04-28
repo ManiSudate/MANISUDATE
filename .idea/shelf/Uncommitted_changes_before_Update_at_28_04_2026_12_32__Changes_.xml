@@ -1,0 +1,29 @@
+<changelist name="Uncommitted_changes_before_Update_at_28_04_2026_12_32_[Changes]" date="1777372336151" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2026_12_32_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 28/04/2026 12:32 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Main.class" />
+    <option name="AFTER_PATH" value="out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Main.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2026_12_32_[Changes]/Main.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Medico.class" />
+    <option name="AFTER_PATH" value="out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Medico.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2026_12_32_[Changes]/Medico.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Prenotazione.class" />
+    <option name="AFTER_PATH" value="out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Prenotazione.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2026_12_32_[Changes]/Prenotazione.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Coda.class" />
+    <option name="AFTER_PATH" value="out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Coda.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2026_12_32_[Changes]/Coda.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Paziente.class" />
+    <option name="AFTER_PATH" value="out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Paziente.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2026_12_32_[Changes]/Paziente.class" />
+  </binary>
+</changelist>

@@ -1,5 +1,7 @@
 package it.edu.cannizzaro.quartab25.catalogo;
-public class BST<T extends Comparable<T>&Catalogabile> {
+import java.io.*;
+
+public class BST<T extends Comparable<T> & Catalogabile & ToCSV> {
     private class Nodo<T> {
         T valore;
         Nodo<T> destra, sinistra;
@@ -77,8 +79,12 @@ public class BST<T extends Comparable<T>&Catalogabile> {
             return;
         }
         visualizzaRicorsivo(nodo.sinistra);
-        System.out.println(nodo.valore.stampaEtichetta());
+        nodo.valore.stampaEtichetta();
         visualizzaRicorsivo(nodo.destra);
+    }
+
+    public void caricaCSV(){
+
     }
 
 }

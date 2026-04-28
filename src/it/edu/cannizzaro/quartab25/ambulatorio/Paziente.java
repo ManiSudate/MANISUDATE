@@ -7,8 +7,6 @@ public class Paziente implements Serializable {
     String sesso;
     String dataNascita;
 
-    public Paziente(){}
-
     public void setNome(String nome) {
         this.nome = nome;
     }

@@ -7,14 +7,9 @@ public class Videogioco extends ElementoCatalogo {
         this.piattaforma = piattaforma;
     }
 
-    public String getPiattaforma() {
-        return piattaforma;
-    }
-
     @Override
-    public String stampaEtichetta() {
-        return "Codice: " + getCodice() + " Titolo: " + getTitolo() + " Anno: "
-                + getAnno() + " Prezzo: " + getPrezzo() + " Piattaforma: " + piattaforma;
+    public void stampaEtichetta() {
+        System.out.println("Codice: "+ codice + "\n"+ "Titolo: " + titolo +"\n"+ "Anno: "+ anno + "\n"+"Prezzo: "+ prezzo+"\n"+"Piattaforma: "+piattaforma+"\n");
     }
 
 }
