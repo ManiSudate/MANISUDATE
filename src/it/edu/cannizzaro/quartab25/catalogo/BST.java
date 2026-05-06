@@ -1,4 +1,6 @@
 package it.edu.cannizzaro.quartab25.catalogo;
+import javafx.scene.control.ListView;
+
 import java.io.*;
 
 public class BST<T extends Comparable<T> & Catalogabile & ToCSV> {
@@ -13,7 +15,7 @@ public class BST<T extends Comparable<T> & Catalogabile & ToCSV> {
         }
     }
 
-    private Nodo<T> radice;
+    public Nodo<T> radice;
 
     public void inserisci(T valore) {
         this.radice = inserisciRicorsivo(radice, valore);
@@ -81,6 +83,15 @@ public class BST<T extends Comparable<T> & Catalogabile & ToCSV> {
         visualizzaRicorsivo(nodo.sinistra);
         nodo.valore.stampaEtichetta();
         visualizzaRicorsivo(nodo.destra);
+    }
+    public void stampa(Nodo<T> nodo, ListView<String> lista){
+        if (nodo != null) {
+            stampa(nodo.sinistra, lista);
+
+            lista.getItems().add(nodo.valore.stampaEtichettaFX());
+
+            stampa(nodo.destra, lista);
+        }
     }
 
     public void caricaCSV(){

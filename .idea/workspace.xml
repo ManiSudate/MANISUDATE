@@ -4,28 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b924759-5054-474e-be8c-a33976470c55" name="Changes" comment="catalogo finito senza csv">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/login/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/google_code_gson.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2026_12_32_[Changes]/Coda.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2026_12_32_[Changes]/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2026_12_32_[Changes]/Medico.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2026_12_32_[Changes]/Paziente.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2026_12_32_[Changes]/Prenotazione.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2026_12_32_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2026_12_32__Changes_.xml" beforeDir="false" />
+    <list default="true" id="3b924759-5054-474e-be8c-a33976470c55" name="Changes" comment="JavaFX">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogo.csv" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/BST$Nodo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/BST$Nodo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/BST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/BST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/ElementoCatalogo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/ElementoCatalogo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Film.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Libro.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Libro.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Videogioco.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Videogioco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/BST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Catalogabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Catalogabile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/ElementoCatalogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/ElementoCatalogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +59,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Catalogo.executor": "Run",
     "Application.Login.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.Unnamed.executor": "Run",
@@ -98,7 +84,15 @@
       <recent name="it.edu.cannizzaro.quartab25.AMBULATORIO" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Catalogo">
+    <configuration name="Catalogo" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="it.edu.cannizzaro.quartab25.catalogo.Main" />
+      <module name="JAVA" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Java\javafx-25_windows-x64_bin-sdk\javafx-sdk-25.0.3\lib&quot; --add-modules javafx.controls" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Login" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
       <option name="MAIN_CLASS_NAME" value="it.edu.cannizzaro.quartab25.login.Login" />
       <module name="JAVA" />
@@ -107,6 +101,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Catalogo" />
+      <item itemvalue="Application.Login" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -147,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777375644058</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="JavaFX">
+      <option name="closed" value="true" />
+      <created>1777980662216</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777980662216</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,7 +171,8 @@
     <MESSAGE value="ASAS" />
     <MESSAGE value="ambulatorio" />
     <MESSAGE value="catalogo finito senza csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="catalogo finito senza csv" />
+    <MESSAGE value="JavaFX" />
+    <option name="LAST_COMMIT_MESSAGE" value="JavaFX" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

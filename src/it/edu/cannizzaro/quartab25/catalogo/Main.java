@@ -1,11 +1,52 @@
 package it.edu.cannizzaro.quartab25.catalogo;
 import java.util.Scanner;
-public class Main {
+import javafx.application.Application;
+import javafx.scene.control.ListView;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+
+public class Main extends Application {
     static BST<ElementoCatalogo> catalogo = new BST<>();
     public static void main(String[] args) {
         popolaLista();
-        catalogo.caricaCSV();
-        menu();
+        launch(args);
+    }
+    @Override
+    public void start(Stage stage){
+        stage.setTitle("CATALOGO");
+
+        VBox righe = new VBox();
+        Label label = new Label("Elementi: ");
+
+
+        ListView<String> lista = new ListView<>();
+        Button aggiungiEle = new Button("Aggiungi elemento");
+        Button cercaEle = new Button("Cerca elemento");
+        Button visualizzaEle = new Button("Visualizza elementi");
+        Button salvaEle = new Button("Salva");
+        righe.getChildren().add(aggiungiEle);
+        righe.getChildren().add(salvaEle);
+        righe.getChildren().add(visualizzaEle);
+        righe.getChildren().add(cercaEle);
+        righe.getChildren().add(label);
+        righe.getChildren().add(lista);
+
+        visualizzaEle.setOnAction(e -> {
+            lista.getItems().clear();   // svuota
+            catalogo.stampa(catalogo.radice, lista);          // ricarica dalla BST
+            lista.setManaged(true);
+            lista.setVisible(true);
+        });
+
+        righe.setSpacing(10);
+        Scene scene = new Scene(righe, 800, 600);
+        stage.setScene(scene);
+        stage.show();
     }
     public static void menu(){
         Scanner s = new Scanner(System.in);
