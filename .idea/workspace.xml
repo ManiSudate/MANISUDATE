@@ -6,18 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3b924759-5054-474e-be8c-a33976470c55" name="Changes" comment="fix catalogo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogo.csv" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/BST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/BST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/ElementoCatalogo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/ElementoCatalogo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Videogioco.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Videogioco.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/BST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Catalogabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Catalogabile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/ElementoCatalogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/ElementoCatalogo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Catalogabile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Catalogabile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Film.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Libro.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Libro.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Videogioco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Videogioco.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,35 +60,35 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Catalogo.executor": "Run",
-    "Application.Login.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Unnamed.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "ignore.preview.features.used": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/filippo.licocci/Documents/projects/JAVA",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.20344828",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Catalogo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Login.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/filippo.licocci/Documents/projects/JAVA&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.20344828&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="it.edu.cannizzaro.quartab25.AMBULATORIO" />
@@ -179,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778272558134</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix catalogo">
+      <option name="closed" value="true" />
+      <created>1778279017188</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1778279017188</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

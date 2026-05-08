@@ -11,7 +11,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
 public class Main extends Application {
-
     static BST<ElementoCatalogo> catalogo = new BST<>();
     public static void main(String[] args) {
         catalogo.caricaCSV();
@@ -21,7 +20,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage){
         stage.setTitle("CATALOGO");
-
+        //--------------- PAGINA PRINCIPALE -----------------
         VBox righe = new VBox();
         righe.setAlignment(Pos.CENTER);
 
@@ -53,7 +52,7 @@ public class Main extends Application {
         righe.getChildren().add(label);
         righe.getChildren().add(lista);
 
-        //------------- METODO AGGIUNGI ----------------
+        //------------- TASTO AGGIUNGI ----------------
 
         aggiungiEle.setOnAction(e -> {
             Stage inserisciElemento = new Stage();
@@ -229,28 +228,24 @@ public class Main extends Application {
             inserisciElemento.show();
         });
 
-        //------------- METODO CERCA ---------------
+        //------------- TASTO CERCA ---------------
 
         cercaEle.setOnAction(e -> {
 
             String codice = testoCerca.getText();
-
-             Catalogabile risultato = catalogo.cercaPerCodice(codice);
-
+            ElementoCatalogo trovato = catalogo.cerca(new Libro(codice,"","","",""));
             lista.getItems().clear();
-
-            if (risultato != null) {
-                lista.getItems().add(risultato.stampaEtichettaFX());
+            if (trovato != null) {
+                lista.getItems().add(trovato.stampaEtichettaFX());
             } else {
                 lista.getItems().add(
                         "Elemento non trovato"
                 );
             }
-
             lista.setVisible(true);
         });
 
-        //----------------- METODO VISUALIZZA ----------------
+        //----------------- TASTO VISUALIZZA ----------------
 
         visualizzaEle.setOnAction(e -> {
             lista.getItems().clear();   // svuota
@@ -260,7 +255,7 @@ public class Main extends Application {
 
         });
 
-        //----------------- METODO SALVA ----------------------
+        //----------------- TASTO SALVA ----------------------
         salvaEle.setOnAction(e -> {
             catalogo.salvaCSV("catalogo.csv");
             lista.getItems().add("Elementi salvati con successo!");
@@ -272,6 +267,9 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
+
+    //-------------------------------------------------------------------------------------------------------------
 
     public static void menu(){
         Scanner s = new Scanner(System.in);
@@ -344,6 +342,10 @@ public class Main extends Application {
         }
         s.close();
     }
+
+
+
+
     public static void cerca(){
         Scanner s = new Scanner(System.in);
         System.out.print("Inserisci codice: ");

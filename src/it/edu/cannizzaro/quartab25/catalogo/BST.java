@@ -140,36 +140,4 @@ public class BST<T extends Comparable<T> & Catalogabile & ToCSV> {
         }
     }
 
-    public T cercaPerCodice(String codice) {
-        return cercaPerCodiceRicorsivo(radice, codice);
-    }
-
-    private T cercaPerCodiceRicorsivo(Nodo<T> nodo, String codice) {
-
-        if (nodo == null) {
-            return null;
-        }
-
-        int confronto = codice.compareTo(
-                nodo.valore.getCodice()
-        );
-
-        if (confronto == 0) {
-            return nodo.valore;
-        }
-
-        if (confronto < 0) {
-            return cercaPerCodiceRicorsivo(
-                    nodo.sinistra,
-                    codice
-            );
-        }
-
-        return cercaPerCodiceRicorsivo(
-                nodo.destra,
-                codice
-        );
-    }
-
-
 }
