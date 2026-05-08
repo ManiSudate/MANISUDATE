@@ -137,7 +137,7 @@ public class BST<T extends Comparable<T> & Catalogabile & ToCSV> {
     public void salvaCSV(String nomeFile) {
     
         try (PrintWriter writer = new PrintWriter(new FileWriter(nomeFile))) {
-            writer.write("\"tipo\", \"titolo\", \"anno di pubblicazione\", \"id\", \"autore/produttore/regista\"");
+            writer.write("\"Tipo\",\"Codice\", \"Titolo\", \"Anno\", \"Prezzo\", \"Autore/Piattaforma/Regista\"\n");
             salvaCSVRicorsivo(radice, writer);
             
         } catch (IOException e) {

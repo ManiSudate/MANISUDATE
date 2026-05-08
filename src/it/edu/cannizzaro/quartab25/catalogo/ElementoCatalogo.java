@@ -13,7 +13,7 @@ public class ElementoCatalogo implements Catalogabile, Comparable<ElementoCatalo
     }
 
 
-    public String printCSV(){return "\""+this.getClass().getSimpleName()+"\","+"\""  +titolo+"\", "+anno+", "+prezzo+", "+codice;}
+    public String printCSV(){return "\""+this.getClass().getSimpleName()+"\","+"\""  +codice+"\", "+titolo+", "+anno+", "+prezzo;}
     
 
     @Override

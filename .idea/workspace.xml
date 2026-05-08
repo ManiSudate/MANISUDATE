@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b924759-5054-474e-be8c-a33976470c55" name="Changes" comment="JavaFX">
+    <list default="true" id="3b924759-5054-474e-be8c-a33976470c55" name="Changes" comment="ambulatorio">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogo.csv" beforeDir="false" afterPath="$PROJECT_DIR$/catalogo.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/BST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/BST.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/BST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Catalogabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Catalogabile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/ElementoCatalogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/ElementoCatalogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Film.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +29,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -35,8 +39,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:ManiSudate/MANISUDATE.git&quot;,
-    &quot;accountId&quot;: &quot;968fdf68-c57e-4ec6-9433-9d3ca21b301c&quot;
+    &quot;url&quot;: &quot;https://github.com/ManiSudate/MANISUDATE.git&quot;,
+    &quot;accountId&quot;: &quot;54823f9f-7706-4e5d-88d4-7664f9367623&quot;
   }
 }</component>
   <component name="McpProjectServerCommands">
@@ -68,11 +72,18 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "ignore.preview.features.used": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/filippo.licocci/Documents/projects/JAVA",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.20344828",
@@ -88,7 +99,7 @@
     <configuration name="Catalogo" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="it.edu.cannizzaro.quartab25.catalogo.Main" />
       <module name="JAVA" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Java\javafx-25_windows-x64_bin-sdk\javafx-sdk-25.0.3\lib&quot; --add-modules javafx.controls" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-26.0.1\lib&quot; --add-modules javafx.controls" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,7 +120,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.33514.17" />
       </set>
     </attachedChunks>
   </component>
@@ -155,6 +166,9 @@
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
