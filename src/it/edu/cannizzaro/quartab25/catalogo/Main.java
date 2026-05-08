@@ -295,7 +295,6 @@ public class Main extends Application {
                     scelta = s.nextInt();
                     s.nextLine(); // svuota buffer sennò non funziona
 
-
                     System.out.print("Inserisci codice: ");
                     String codice = s.nextLine();
                     System.out.print("Inserisci titolo: ");
@@ -324,16 +323,12 @@ public class Main extends Application {
                             break;
                     }
                     break;
-
-
                 case 2:
                     cerca();
-
-
+                    break;
                 case 3:
                     catalogo.visualizza();
                     break;
-
                 case 4:
                     catalogo.salvaCSV("catalogo.csv");
                     System.out.println("Catalogo salvato con successo in catalogo.csv!");
@@ -342,8 +337,6 @@ public class Main extends Application {
         }
         s.close();
     }
-
-
 
 
     public static void cerca(){
