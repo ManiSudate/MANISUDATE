@@ -20,4 +20,6 @@ public class Film extends ElementoCatalogo {
     public String printCSV() {
         return super.printCSV() + ", \"" + regista + "\"";
     }
+    @Override
+    public String getCodice(){return codice;}
 }

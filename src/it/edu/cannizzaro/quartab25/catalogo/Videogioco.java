@@ -16,5 +16,7 @@ public class Videogioco extends ElementoCatalogo {
     public String printCSV() {
         return super.printCSV() + ", \"" + piattaforma + "\"";
     }
+    @Override
+    public String getCodice(){return codice;}
 
 }

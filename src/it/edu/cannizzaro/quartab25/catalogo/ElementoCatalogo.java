@@ -29,4 +29,8 @@ public class ElementoCatalogo implements Catalogabile, Comparable<ElementoCatalo
     public String stampaEtichettaFX(){
         return "Codice: "+ codice + "  Titolo: " + titolo + "  Anno: "+ anno +"  Prezzo: "+ prezzo+"\n";
     }
+    @Override
+    public String getCodice(){
+        return codice;
+    }
 }

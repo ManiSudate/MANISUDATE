@@ -54,24 +54,6 @@ public class BST<T extends Comparable<T> & Catalogabile & ToCSV> {
         }
     }
 
-    public boolean elimina(T valore) {
-        return eliminaRicorsivo(radice, valore);
-    }
-
-    private boolean eliminaRicorsivo(Nodo<T> nodo, T valore) {
-        if (nodo == null) {
-            return false;
-        }
-        int confronto = valore.compareTo(nodo.valore);
-        if (confronto == 0) {
-            return true;
-        } else if (confronto < 0) {
-            return eliminaRicorsivo(nodo.sinistra, valore);
-        } else {
-            return eliminaRicorsivo(nodo.destra, valore);
-        }
-    }
-
     public void visualizza() {
         visualizzaRicorsivo(radice);
     }
@@ -84,15 +66,7 @@ public class BST<T extends Comparable<T> & Catalogabile & ToCSV> {
         nodo.valore.stampaEtichetta();
         visualizzaRicorsivo(nodo.destra);
     }
-    public void stampa(Nodo<T> nodo, ListView<String> lista){
-        if (nodo != null) {
-            stampa(nodo.sinistra, lista);
 
-            lista.getItems().add(nodo.valore.stampaEtichettaFX());
-
-            stampa(nodo.destra, lista);
-        }
-    }
 
     public void caricaCSV(){
         try {
@@ -153,5 +127,49 @@ public class BST<T extends Comparable<T> & Catalogabile & ToCSV> {
         writer.println(nodo.valore.printCSV());
         salvaCSVRicorsivo(nodo.destra, writer);
     }
+
+    // ------------------------- METODI PER JAVA FX ----------------------
+
+    public void stampa(Nodo<T> nodo, ListView<String> lista){
+        if (nodo != null) {
+            stampa(nodo.sinistra, lista);
+
+            lista.getItems().add(nodo.valore.stampaEtichettaFX());
+
+            stampa(nodo.destra, lista);
+        }
+    }
+
+    public T cercaPerCodice(String codice) {
+        return cercaPerCodiceRicorsivo(radice, codice);
+    }
+
+    private T cercaPerCodiceRicorsivo(Nodo<T> nodo, String codice) {
+
+        if (nodo == null) {
+            return null;
+        }
+
+        int confronto = codice.compareTo(
+                nodo.valore.getCodice()
+        );
+
+        if (confronto == 0) {
+            return nodo.valore;
+        }
+
+        if (confronto < 0) {
+            return cercaPerCodiceRicorsivo(
+                    nodo.sinistra,
+                    codice
+            );
+        }
+
+        return cercaPerCodiceRicorsivo(
+                nodo.destra,
+                codice
+        );
+    }
+
 
 }

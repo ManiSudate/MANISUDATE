@@ -20,5 +20,6 @@ public class Libro extends ElementoCatalogo {
     public String printCSV() {
         return super.printCSV() + ", \"" + autore + "\"";
     }
-
+    @Override
+    public String getCodice(){return codice;}
 }
