@@ -1,9 +1,11 @@
 package it.edu.cannizzaro.quartab25.catalogo;
 import java.util.Scanner;
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -17,255 +19,264 @@ public class Main extends Application {
         launch(args);
     }
 
+    public ListView<String> lista = new ListView<>();
+    TextField fieldCerca = new TextField();
+
     @Override
     public void start(Stage stage){
         stage.setTitle("CATALOGO");
-        //--------------- PAGINA PRINCIPALE -----------------
-        VBox righe = new VBox();
-        righe.setAlignment(Pos.CENTER);
+        Label titolo = new Label("CATALOGO MULTIMEDIALE");
+        titolo.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
 
-        TextField testoCerca = new TextField();
-        testoCerca.setPromptText("Inserisci codice");
-        testoCerca.setMaxWidth(150);
+        fieldCerca.setPromptText("Inserisci codice");
+        fieldCerca.setMaxWidth(150);
 
-        Label label = new Label("Elementi: ");
-        label.setStyle("-fx-font-size: 15");
-
-        ListView<String> lista = new ListView<>();
+        Label lblElementi = new Label("Elementi: ");
+        lblElementi.setStyle("-fx-font-size: 15; -fx-font-weight: bold;");
         lista.setPrefHeight(300);
 
-        Button aggiungiEle = new Button("Aggiungi elemento");
-        Button cercaEle = new Button("Cerca elemento");
-        Button visualizzaEle = new Button("Visualizza elementi");
-        Button salvaEle = new Button("Salva");
+        Button btnAggiungiEle = new Button("Aggiungi elemento");
+        Button btnCercaEle = new Button("Cerca elemento");
+        Button btnVisualizzaEle = new Button("Visualizza elementi");
+        Button btnSalvaEle = new Button("Salva");
 
-        aggiungiEle.setStyle("-fx-font-size: 15");
-        cercaEle.setStyle("-fx-font-size: 15");
-        visualizzaEle.setStyle("-fx-font-size: 15");
-        salvaEle.setStyle("-fx-font-size: 15");
+        btnAggiungiEle.setOnAction(e ->   {    aggiungiElementi();     });
+        btnCercaEle.setOnAction(e ->      {    cercaElementi();        });
+        btnVisualizzaEle.setOnAction(e -> {    visualizzaElementi();   });
+        btnSalvaEle.setOnAction(e ->      {    salvaElementi();        });
 
-        righe.getChildren().add(aggiungiEle);
-        righe.getChildren().add(cercaEle);
-        righe.getChildren().add(testoCerca);
-        righe.getChildren().add(visualizzaEle);
-        righe.getChildren().add(salvaEle);
-        righe.getChildren().add(label);
-        righe.getChildren().add(lista);
+        VBox menu = new VBox(15,titolo,btnCercaEle,fieldCerca,btnAggiungiEle,btnVisualizzaEle,btnSalvaEle,lista);
+        menu.setPadding(new Insets(20));
+        menu.setAlignment(Pos.TOP_CENTER);
+        menu.setPrefWidth(250);
 
-        //------------- TASTO AGGIUNGI ----------------
+        BorderPane bordo = new BorderPane();
+        bordo.setTop(titolo);
+        bordo.setLeft(menu);
+        bordo.setCenter(lista);
+        BorderPane.setAlignment(titolo, Pos.CENTER);
+        BorderPane.setMargin(titolo, new Insets(20));
 
-        aggiungiEle.setOnAction(e -> {
-            Stage inserisciElemento = new Stage();
-            VBox vbox = new VBox();
-            vbox.setAlignment(Pos.CENTER);
-            vbox.setSpacing(10);
-            Button libro = new Button("Libro");
-            Button film = new Button("Film");
-            Button videogioco = new Button("Videogioco");
-            vbox.setStyle("-fx-font-size: 15");
-
-            Label codice = new Label("Codice: ");
-            Label titolo = new Label("Titolo: ");
-            Label anno = new Label("Anno: ");
-            Label prezzo = new Label("Prezzo: ");
-
-            TextField insCodice = new TextField();
-            insCodice.setPromptText("Inserisci codice");
-            insCodice.setMaxWidth(150);
-            TextField insTitolo = new TextField();
-            insTitolo.setPromptText("Inserisci titolo");
-            insTitolo.setMaxWidth(150);
-            TextField insPrezzo = new TextField();
-            insPrezzo.setPromptText("Inserisci prezzo");
-            insPrezzo.setMaxWidth(150);
-            TextField insAnno = new TextField();
-            insAnno.setPromptText("Inserisci anno");
-            insAnno.setMaxWidth(150);
-
-            Button aggiungi = new Button("Aggiungi");
-            aggiungi.setStyle("-fx-font-size: 15");
-            aggiungi.setAlignment(Pos.BOTTOM_CENTER);
-
-
-            //----------- LIBRO -----------
-            libro.setOnAction(actionEvent ->{
-                Stage aggiungiLibro = new Stage();
-                VBox vboxLibro = new VBox();
-                vboxLibro.setAlignment(Pos.CENTER);
-                vboxLibro.setSpacing(10);
-
-                Label autore = new Label("Autore: ");
-                TextField insAutore = new TextField();
-                insAutore.setPromptText("Inserisci autore");
-                insAutore.setMaxWidth(150);
-
-                aggiungi.setOnAction(actionEvent1 -> {
-                    Libro nuovoLibro = new Libro(
-                            insCodice.getText(),
-                            insTitolo.getText(),
-                            insAnno.getText(),
-                            insPrezzo.getText(),
-                            insAutore.getText()
-
-                    );
-                    catalogo.inserisci(nuovoLibro);
-                });
-
-
-                vboxLibro.getChildren().add(codice);
-                vboxLibro.getChildren().add(insCodice);
-                vboxLibro.getChildren().add(titolo);
-                vboxLibro.getChildren().add(insTitolo);
-                vboxLibro.getChildren().add(prezzo);
-                vboxLibro.getChildren().add(insPrezzo);
-                vboxLibro.getChildren().add(anno);
-                vboxLibro.getChildren().add(insAnno);
-                vboxLibro.getChildren().add(autore);
-                vboxLibro.getChildren().add(insAutore);
-                vboxLibro.getChildren().add(aggiungi);
-                vboxLibro.setStyle("-fx-font-size: 15");
-
-
-                Scene sceneLibro = new Scene(vboxLibro,300,400);
-                aggiungiLibro.setScene(sceneLibro);
-                aggiungiLibro.show();
-
-            });
-
-
-            //-------------- FILM -----------------
-            film.setOnAction(actionEvent -> {
-                Stage aggiungiFilm = new Stage();
-                VBox vboxFilm = new VBox();
-                vboxFilm.setAlignment(Pos.CENTER);
-                vboxFilm.setSpacing(10);
-
-                Label regista = new Label("Regista: ");
-                TextField insRegista = new TextField();
-                insRegista.setPromptText("Inserisci regista");
-                insRegista.setMaxWidth(150);
-
-                aggiungi.setOnAction(actionEvent1 -> {
-                    Film nuovoFilm = new Film(
-                            insCodice.getText(),
-                            insTitolo.getText(),
-                            insAnno.getText(),
-                            insPrezzo.getText(),
-                            insRegista.getText()
-                    );
-                    catalogo.inserisci(nuovoFilm);
-                });
-                vboxFilm.getChildren().add(codice);
-                vboxFilm.getChildren().add(insCodice);
-                vboxFilm.getChildren().add(titolo);
-                vboxFilm.getChildren().add(insTitolo);
-                vboxFilm.getChildren().add(prezzo);
-                vboxFilm.getChildren().add(insPrezzo);
-                vboxFilm.getChildren().add(anno);
-                vboxFilm.getChildren().add(insAnno);
-                vboxFilm.getChildren().add(regista);
-                vboxFilm.getChildren().add(insRegista);
-                vboxFilm.getChildren().add(aggiungi);
-
-                vboxFilm.setStyle("-fx-font-size: 15");
-                Scene sceneFilm = new Scene(vboxFilm,300,400);
-                aggiungiFilm.setScene(sceneFilm);
-                aggiungiFilm.show();
-
-            });
-
-            //------------------ VIDEOGIOCO --------------------
-            videogioco.setOnAction(actionEvent -> {
-                Stage aggiungiVideogioco = new Stage();
-                VBox vboxVideogioco = new VBox();
-                vboxVideogioco.setAlignment(Pos.CENTER);
-                vboxVideogioco.setSpacing(10);
-
-                Label piattaforma = new Label("Piattaforma: ");
-                TextField insPiattaforma = new TextField();
-                insPiattaforma.setPromptText("Inserisci piattaforma");
-                insPiattaforma.setMaxWidth(150);
-
-                aggiungi.setOnAction(actionEvent1 -> {
-                    Videogioco vid = new Videogioco(
-                            insCodice.getText(),
-                            insTitolo.getText(),
-                            insAnno.getText(),
-                            insPrezzo.getText(),
-                            insPiattaforma.getText()
-                    );
-                    catalogo.inserisci(vid);
-                });
-
-
-
-                vboxVideogioco.getChildren().add(codice);
-                vboxVideogioco.getChildren().add(insCodice);
-                vboxVideogioco.getChildren().add(titolo);
-                vboxVideogioco.getChildren().add(insTitolo);
-                vboxVideogioco.getChildren().add(prezzo);
-                vboxVideogioco.getChildren().add(insPrezzo);
-                vboxVideogioco.getChildren().add(anno);
-                vboxVideogioco.getChildren().add(insAnno);
-                vboxVideogioco.getChildren().add(piattaforma);
-                vboxVideogioco.getChildren().add(insPiattaforma);
-                vboxVideogioco.getChildren().add(aggiungi);
-
-
-
-                vboxVideogioco.setStyle("-fx-font-size: 15");
-                Scene sceneVideogio = new Scene(vboxVideogioco,300,400);
-                aggiungiVideogioco.setScene(sceneVideogio);
-                aggiungiVideogioco.show();
-            });
-
-
-            vbox.getChildren().add(libro);
-            vbox.getChildren().add(film);
-            vbox.getChildren().add(videogioco);
-            Scene scene = new Scene(vbox, 150, 150);
-            inserisciElemento.setScene(scene);
-            inserisciElemento.show();
-        });
-
-        //------------- TASTO CERCA ---------------
-
-        cercaEle.setOnAction(e -> {
-
-            String codice = testoCerca.getText();
-            ElementoCatalogo trovato = catalogo.cerca(new Libro(codice,"","","",""));
-            lista.getItems().clear();
-            if (trovato != null) {
-                lista.getItems().add(trovato.stampaEtichettaFX());
-            } else {
-                lista.getItems().add(
-                        "Elemento non trovato"
-                );
-            }
-            lista.setVisible(true);
-        });
-
-        //----------------- TASTO VISUALIZZA ----------------
-
-        visualizzaEle.setOnAction(e -> {
-            lista.getItems().clear();   // svuota
-            catalogo.stampa(catalogo.radice, lista);          // ricarica dalla BST
-            lista.setManaged(true);
-            lista.setVisible(true);
-
-        });
-
-        //----------------- TASTO SALVA ----------------------
-        salvaEle.setOnAction(e -> {
-            catalogo.salvaCSV("catalogo.csv");
-            lista.getItems().add("Elementi salvati con successo!");
-        });
-
-
-        righe.setSpacing(10);
-        Scene scene = new Scene(righe, 600, 500);
+        Scene scene = new Scene(bordo, 800, 400);
         stage.setScene(scene);
+        stage.setOnCloseRequest(windowEvent -> {
+            salvaElementi();
+        });
         stage.show();
+    }
+
+    //------------------------------------------------------------------------
+
+    public void salvaElementi(){
+        catalogo.salvaCSV("catalogo.csv");
+        lista.getItems().add("Elementi salvati con successo!");
+    }
+    public void visualizzaElementi(){
+        lista.getItems().clear();   // svuota
+        catalogo.stampa(catalogo.radice, lista);          // ricarica dalla BST
+        lista.setManaged(true);
+        lista.setVisible(true);
+    }
+    public void cercaElementi(){
+        String codice = fieldCerca.getText();
+        ElementoCatalogo trovato = catalogo.cerca(new Libro(codice,"","","",""));
+        lista.getItems().clear();
+        if (trovato != null) {
+            lista.getItems().add(trovato.stampaEtichettaFX());
+        } else {
+            lista.getItems().add(
+                    "Elemento non trovato"
+            );
+        }
+        lista.setVisible(true);
+    }
+
+    public void aggiungiElementi(){
+        Stage inserisciElemento = new Stage();
+        inserisciElemento.setTitle("Aggiungi Elementi");
+        Label titoloPagina = new Label("SCELTA");
+        titoloPagina.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
+        VBox vbox = new VBox();
+        vbox.setAlignment(Pos.CENTER);
+        vbox.setSpacing(10);
+        Button libro = new Button("Libro");
+        Button film = new Button("Film");
+        Button videogioco = new Button("Videogioco");
+        vbox.setStyle("-fx-font-size: 15");
+
+        Label codice = new Label("Codice: ");
+        Label titolo = new Label("Titolo: ");
+        Label anno = new Label("Anno: ");
+        Label prezzo = new Label("Prezzo: ");
+
+        TextField insCodice = new TextField();
+        insCodice.setPromptText("Inserisci codice");
+        insCodice.setMaxWidth(150);
+        TextField insTitolo = new TextField();
+        insTitolo.setPromptText("Inserisci titolo");
+        insTitolo.setMaxWidth(150);
+        TextField insPrezzo = new TextField();
+        insPrezzo.setPromptText("Inserisci prezzo");
+        insPrezzo.setMaxWidth(150);
+        TextField insAnno = new TextField();
+        insAnno.setPromptText("Inserisci anno");
+        insAnno.setMaxWidth(150);
+
+        Button aggiungi = new Button("Aggiungi");
+        aggiungi.setStyle("-fx-font-size: 15");
+        aggiungi.setAlignment(Pos.BOTTOM_CENTER);
+
+
+        //----------- LIBRO -----------
+        libro.setOnAction(actionEvent ->{
+            Stage aggiungiLibro = new Stage();
+            aggiungiLibro.setTitle("LIBRO");
+            Label titoloLibro = new Label("LIBRO");
+            titoloLibro.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
+            VBox vboxLibro = new VBox();
+            vboxLibro.setAlignment(Pos.CENTER);
+            vboxLibro.setSpacing(10);
+
+            Label autore = new Label("Autore: ");
+            TextField insAutore = new TextField();
+            insAutore.setPromptText("Inserisci autore");
+            insAutore.setMaxWidth(150);
+
+            aggiungi.setOnAction(actionEvent1 -> {
+                Libro nuovoLibro = new Libro(
+                        insCodice.getText(),
+                        insTitolo.getText(),
+                        insAnno.getText(),
+                        insPrezzo.getText(),
+                        insAutore.getText()
+
+                );
+                catalogo.inserisci(nuovoLibro);
+            });
+
+            vboxLibro.getChildren().add(titoloLibro);
+            vboxLibro.getChildren().add(codice);
+            vboxLibro.getChildren().add(insCodice);
+            vboxLibro.getChildren().add(titolo);
+            vboxLibro.getChildren().add(insTitolo);
+            vboxLibro.getChildren().add(prezzo);
+            vboxLibro.getChildren().add(insPrezzo);
+            vboxLibro.getChildren().add(anno);
+            vboxLibro.getChildren().add(insAnno);
+            vboxLibro.getChildren().add(autore);
+            vboxLibro.getChildren().add(insAutore);
+            vboxLibro.getChildren().add(aggiungi);
+            vboxLibro.setStyle("-fx-font-size: 15");
+
+
+            Scene sceneLibro = new Scene(vboxLibro,400,450);
+            aggiungiLibro.setScene(sceneLibro);
+            aggiungiLibro.show();
+
+        });
+
+
+        //-------------- FILM -----------------
+        film.setOnAction(actionEvent -> {
+            Stage aggiungiFilm = new Stage();
+            aggiungiFilm.setTitle("FILM");
+            Label titoloFilm = new Label("FILM");
+            titoloFilm.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
+            VBox vboxFilm = new VBox();
+            vboxFilm.setAlignment(Pos.CENTER);
+            vboxFilm.setSpacing(10);
+
+            Label regista = new Label("Regista: ");
+            TextField insRegista = new TextField();
+            insRegista.setPromptText("Inserisci regista");
+            insRegista.setMaxWidth(150);
+
+            aggiungi.setOnAction(actionEvent1 -> {
+                Film nuovoFilm = new Film(
+                        insCodice.getText(),
+                        insTitolo.getText(),
+                        insAnno.getText(),
+                        insPrezzo.getText(),
+                        insRegista.getText()
+                );
+                catalogo.inserisci(nuovoFilm);
+            });
+            vboxFilm.getChildren().add(titoloFilm);
+            vboxFilm.getChildren().add(codice);
+            vboxFilm.getChildren().add(insCodice);
+            vboxFilm.getChildren().add(titolo);
+            vboxFilm.getChildren().add(insTitolo);
+            vboxFilm.getChildren().add(prezzo);
+            vboxFilm.getChildren().add(insPrezzo);
+            vboxFilm.getChildren().add(anno);
+            vboxFilm.getChildren().add(insAnno);
+            vboxFilm.getChildren().add(regista);
+            vboxFilm.getChildren().add(insRegista);
+            vboxFilm.getChildren().add(aggiungi);
+
+            vboxFilm.setStyle("-fx-font-size: 15");
+            Scene sceneFilm = new Scene(vboxFilm,400,450);
+            aggiungiFilm.setScene(sceneFilm);
+            aggiungiFilm.show();
+
+        });
+
+        //------------------ VIDEOGIOCO --------------------
+        videogioco.setOnAction(actionEvent -> {
+            Stage aggiungiVideogioco = new Stage();
+            aggiungiVideogioco.setTitle("VIDEOGIOCO");
+            Label titoloVIDEOGIOCO = new Label("VIDEOGIOCO");
+            titoloVIDEOGIOCO.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
+            VBox vboxVideogioco = new VBox();
+            vboxVideogioco.setAlignment(Pos.CENTER);
+            vboxVideogioco.setSpacing(10);
+
+            Label piattaforma = new Label("Piattaforma: ");
+            TextField insPiattaforma = new TextField();
+            insPiattaforma.setPromptText("Inserisci piattaforma");
+            insPiattaforma.setMaxWidth(150);
+
+            aggiungi.setOnAction(actionEvent1 -> {
+                Videogioco vid = new Videogioco(
+                        insCodice.getText(),
+                        insTitolo.getText(),
+                        insAnno.getText(),
+                        insPrezzo.getText(),
+                        insPiattaforma.getText()
+                );
+                catalogo.inserisci(vid);
+            });
+
+
+            vboxVideogioco.getChildren().add(titoloVIDEOGIOCO);
+            vboxVideogioco.getChildren().add(codice);
+            vboxVideogioco.getChildren().add(insCodice);
+            vboxVideogioco.getChildren().add(titolo);
+            vboxVideogioco.getChildren().add(insTitolo);
+            vboxVideogioco.getChildren().add(prezzo);
+            vboxVideogioco.getChildren().add(insPrezzo);
+            vboxVideogioco.getChildren().add(anno);
+            vboxVideogioco.getChildren().add(insAnno);
+            vboxVideogioco.getChildren().add(piattaforma);
+            vboxVideogioco.getChildren().add(insPiattaforma);
+            vboxVideogioco.getChildren().add(aggiungi);
+
+
+
+            vboxVideogioco.setStyle("-fx-font-size: 15");
+            Scene sceneVideogio = new Scene(vboxVideogioco,400,450);
+            aggiungiVideogioco.setScene(sceneVideogio);
+            aggiungiVideogioco.show();
+        });
+
+        vbox.getChildren().add(titoloPagina);
+        vbox.getChildren().add(libro);
+        vbox.getChildren().add(film);
+        vbox.getChildren().add(videogioco);
+
+        Scene scene = new Scene(vbox, 150, 200);
+        inserisciElemento.setScene(scene);
+        inserisciElemento.show();
     }
 
 

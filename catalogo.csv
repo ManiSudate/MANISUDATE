@@ -1,4 +1,5 @@
 "Tipo","Codice", "Titolo", "Anno", "Prezzo", "Autore/Piattaforma/Regista"
+"Film","F007", 007, 2007, 67, "io"
 "Film","F01", Pulp Fiction, 1994, 24.99, "Quentin Tarantino"
 "Film","F02", Interstellar, 2014, 24.99, "Christopher Nolan"
 "Film","F03", Parasite, 2019, 24.99, "Bong Joon-ho"
