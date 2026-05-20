@@ -3,11 +3,13 @@ public class Contatto {
     public String nome;
     public String cognome;
     public String numero;
+    public boolean isPreferito;
 
-    public Contatto(String nome, String cognome, String numero) {
+    public Contatto(String nome, String cognome, String numero, boolean isPreferito) {
         this.nome = nome;
         this.cognome = cognome;
         this.numero = numero;
+        this.isPreferito = isPreferito;
     }
     public Contatto(String nome, String cognome) {
         this.nome = nome;
@@ -30,6 +32,12 @@ public class Contatto {
     }
     public void setNumero(String numero) {
         this.numero = numero;
+    }
+    public boolean getPreferito(){
+        return isPreferito;
+    }
+    public void setPreferito(boolean isPreferito){
+        this.isPreferito = isPreferito;
     }
 
     @Override
