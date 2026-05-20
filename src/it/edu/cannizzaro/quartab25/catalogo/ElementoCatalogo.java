@@ -18,7 +18,7 @@ public class ElementoCatalogo implements Catalogabile, Comparable<ElementoCatalo
 
     @Override
     public int compareTo(ElementoCatalogo altro) {
-        return this.codice.compareTo(altro.codice);
+        return this.codice.toUpperCase().compareTo(altro.codice.toUpperCase());
     }
 
     @Override
