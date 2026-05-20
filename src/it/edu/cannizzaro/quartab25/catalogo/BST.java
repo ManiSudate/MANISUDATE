@@ -35,6 +35,55 @@ public class BST<T extends Comparable<T> & Catalogabile & ToCSV> {
         }
         return nodo;
     }
+    public void elimina(T valore){
+        radice = eliminaRicorsivo(radice, valore);
+    }
+    private Nodo<T> eliminaRicorsivo(Nodo<T> nodo, T valore){
+
+        if(nodo == null){
+            return null;
+        }
+
+        int confronto = valore.compareTo(nodo.valore);
+
+        if(confronto < 0){
+            nodo.sinistra = eliminaRicorsivo(nodo.sinistra, valore);
+
+        } else if(confronto > 0){
+            nodo.destra = eliminaRicorsivo(nodo.destra, valore);
+
+        } else {
+
+            // caso 1: nodo senza figli
+            if(nodo.sinistra == null && nodo.destra == null){
+                return null;
+            }
+
+            // caso 2: un solo figlio
+            if(nodo.sinistra == null){
+                return nodo.destra;
+            }
+
+            if(nodo.destra == null){
+                return nodo.sinistra;
+            }
+
+            // caso 3: due figli
+            Nodo<T> successore = trovaMin(nodo.destra);
+            nodo.valore = successore.valore;
+            nodo.destra = eliminaRicorsivo(nodo.destra, successore.valore);
+        }
+
+        return nodo;
+    }
+    private Nodo<T> trovaMin(Nodo<T> nodo){
+
+        while(nodo.sinistra != null){
+            nodo = nodo.sinistra;
+        }
+
+        return nodo;
+    }
 
     public T cerca(T valore) {
         return cercaRicorsivo(radice, valore);
