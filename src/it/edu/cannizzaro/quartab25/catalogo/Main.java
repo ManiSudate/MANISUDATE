@@ -3,15 +3,17 @@ import java.util.Scanner;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
+import javafx.animation.TranslateTransition;
+import javafx.util.Duration;
+import javafx.animation.*;
+import javafx.scene.paint.Color;
+import javafx.util.Duration;
 
 public class Main extends Application {
     static BST<ElementoCatalogo> catalogo = new BST<>();
@@ -25,60 +27,158 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage){
-        stage.setTitle("CATALOGO");
-        Label titolo = new Label("CATALOGO MULTIMEDIALE");
-        titolo.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
 
-        fieldCerca.setPromptText("Codice da cercare/eliminare");
-        fieldCerca.setMaxWidth(150);
+        stage.setTitle("Catalogo Multimediale");
 
-        Label lblElementi = new Label("Elementi: ");
-        lblElementi.setStyle("-fx-font-size: 15; -fx-font-weight: bold;");
-        lista.setPrefHeight(300);
+        // ---------------- TITOLO ----------------
+        Label titolo = new Label("CATALOGO");
+        titolo.setStyle("""
+            -fx-font-size: 24px;
+            -fx-font-weight: bold;
+            -fx-text-fill: #2c3e50;
+            -fx-padding: 10 0 20 0;
+            """);
 
-        Button btnAggiungiEle = new Button("Aggiungi elemento");
-        Button btnEliminaEle = new Button("Elimina elemento");
-        Button btnCercaEle = new Button("Cerca elemento");
-        Button btnVisualizzaEle = new Button("Visualizza elementi");
-        Button btnSalvaEle = new Button("Salva");
+        // ---------------- SEARCH ----------------
+        fieldCerca.setPromptText("Cerca per codice...");
+        fieldCerca.setMaxWidth(Double.MAX_VALUE);
 
-        btnAggiungiEle.setOnAction(e ->   {    aggiungiElementi();     });
-        btnEliminaEle.setOnAction(e ->    {    eliminaElemento();      });
-        btnCercaEle.setOnAction(e ->      {    cercaElementi();        });
-        btnVisualizzaEle.setOnAction(e -> {    visualizzaElementi();   });
-        btnSalvaEle.setOnAction(e ->      {    salvaElementi();        });
+        fieldCerca.setStyle("""
+            -fx-background-radius: 6;
+            -fx-padding: 8;
+            -fx-border-color: #dcdcdc;
+            -fx-border-radius: 6;
+            """);
 
-        VBox menu = new VBox(
-                15,
+        // ---------------- LISTA ----------------
+        lista.setPrefSize(600, 450);
+        lista.setFixedCellSize(55);
+
+        lista.setStyle("""
+            -fx-background-color: #f5f6fa;
+            -fx-border-color: #dcdcdc;
+            -fx-border-radius: 10;
+            -fx-background-radius: 10;
+            -fx-font-size: 14px;
+            """);
+
+        // ---------------- BOTTONI ----------------
+        Button btnAggiungi = new Button("Aggiungi");
+        Button btnCerca = new Button("Cerca");
+        Button btnVisualizza = new Button("Visualizza");
+        Button btnElimina = new Button("Elimina");
+        Button btnSalva = new Button("Salva");
+
+        Button[] buttons = {btnAggiungi, btnCerca, btnVisualizza, btnElimina, btnSalva};
+
+        for(Button b : buttons){
+
+            b.setMaxWidth(Double.MAX_VALUE);
+
+            String base = """
+                -fx-background-color: transparent;
+                -fx-text-fill: #2c3e50;
+                -fx-font-size: 14px;
+                -fx-padding: 10;
+                -fx-background-radius: 8;
+                -fx-cursor: hand;
+                """;
+
+            String hover = """
+                -fx-background-color: #e3eaf5;
+                -fx-text-fill: #2c3e50;
+                -fx-font-size: 14px;
+                -fx-padding: 10;
+                -fx-background-radius: 8;
+                """;
+
+            b.setStyle(base);
+
+            b.setOnMouseEntered(e -> {
+                b.setStyle(hover);
+                b.setTranslateX(3);
+            });
+
+            b.setOnMouseExited(e -> {
+                b.setStyle(base);
+                b.setTranslateX(0);
+            });
+        }
+
+        // ---------------- EVENTI ----------------
+        btnAggiungi.setOnAction(e -> aggiungiElementi());
+        btnCerca.setOnAction(e -> cercaElementi());
+        btnVisualizza.setOnAction(e -> visualizzaElementi());
+        btnElimina.setOnAction(e -> eliminaElemento());
+        btnSalva.setOnAction(e -> salvaElementi());
+
+        // ---------------- SIDEBAR ----------------
+        VBox sidebar = new VBox(15,
                 titolo,
-                btnCercaEle,
                 fieldCerca,
-                btnAggiungiEle,
-                btnVisualizzaEle,
-                btnEliminaEle,
-                btnSalvaEle,
-                lista
+                btnCerca,
+                btnAggiungi,
+                btnVisualizza,
+                btnElimina,
+                btnSalva
         );
-        menu.setPadding(new Insets(20));
-        menu.setAlignment(Pos.TOP_CENTER);
-        menu.setPrefWidth(250);
 
-        BorderPane bordo = new BorderPane();
-        bordo.setTop(titolo);
-        bordo.setLeft(menu);
-        bordo.setCenter(lista);
-        BorderPane.setAlignment(titolo, Pos.CENTER);
-        BorderPane.setMargin(titolo, new Insets(20));
+        sidebar.setStyle("""
+            -fx-background-color: #f0f4f8;
+            -fx-padding: 20;
+            """);
 
-        Scene scene = new Scene(bordo, 800, 400);
+        sidebar.setPrefWidth(220);
+
+        // ---------------- CONTENT ----------------
+        VBox content = new VBox(15, lista);
+
+        content.setStyle("""
+            -fx-background-color: #ffffff;
+            -fx-padding: 20;
+            """);
+
+        // ---------------- ROOT ----------------
+        BorderPane root = new BorderPane();
+        root.setLeft(sidebar);
+        root.setCenter(content);
+
+        Scene scene = new Scene(root, 950, 550);
+
         stage.setScene(scene);
-        stage.setOnCloseRequest(windowEvent -> {
-            salvaElementi();
-        });
         stage.show();
     }
 
     //------------------------------------------------------------------------
+    private void animaColore(Button b, Color from, Color to) {
+
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.ZERO,
+                        new KeyValue(b.styleProperty(),
+                                "-fx-background-color: " + toHex(from) + ";" +
+                                        "-fx-text-fill: #f5f6fa;" +
+                                        "-fx-background-radius: 10;" +
+                                        "-fx-font-size: 14px;" +
+                                        "-fx-padding: 12;")
+                ),
+                new KeyFrame(Duration.millis(180),
+                        new KeyValue(b.styleProperty(),
+                                "-fx-background-color: " + toHex(to) + ";" +
+                                        "-fx-text-fill: #f5f6fa;" +
+                                        "-fx-background-radius: 10;" +
+                                        "-fx-font-size: 14px;" +
+                                        "-fx-padding: 12;")
+                )
+        );
+
+        timeline.play();
+    }
+    private String toHex(Color c){
+        return String.format("#%02X%02X%02X",
+                (int)(c.getRed()*255),
+                (int)(c.getGreen()*255),
+                (int)(c.getBlue()*255));
+    }
 
     public void salvaElementi(){
         catalogo.salvaCSV("catalogo.csv");
@@ -123,217 +223,213 @@ public class Main extends Application {
 
         Stage sceltaStage = new Stage();
         sceltaStage.setTitle("Aggiungi Elemento");
+
         sceltaStage.initModality(Modality.APPLICATION_MODAL);
 
-        Label titoloPagina = new Label("SCELTA");
-        titoloPagina.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
+        Label titolo = new Label("Seleziona tipo");
 
-        Button libro = new Button("Libro");
-        Button film = new Button("Film");
-        Button videogioco = new Button("Videogioco");
+        ComboBox<String> scelta = new ComboBox<>();
+        scelta.getItems().addAll("Libro", "Film", "Videogioco");
+        scelta.setPromptText("Scegli tipo");
 
-        VBox vbox = new VBox(10, titoloPagina, libro, film, videogioco);
-        vbox.setAlignment(Pos.CENTER);
+        Button continua = new Button("Continua");
 
-        // ---------------- LIBRO ----------------
+        VBox root = new VBox(15, titolo, scelta, continua);
+        root.setAlignment(Pos.CENTER);
 
-        libro.setOnAction(e -> {
+        continua.setOnAction(e -> {
 
-            sceltaStage.close();
+            String tipo = scelta.getValue();
 
-            Stage stageLibro = new Stage();
-            stageLibro.setTitle("LIBRO");
-            stageLibro.initModality(Modality.APPLICATION_MODAL);
-
-            Label titolo = new Label("LIBRO");
-            titolo.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
-
-            TextField insCodice = new TextField();
-            insCodice.setPromptText("Codice");
-
-            TextField insTitolo = new TextField();
-            insTitolo.setPromptText("Titolo");
-
-            TextField insAnno = new TextField();
-            insAnno.setPromptText("Anno");
-
-            TextField insPrezzo = new TextField();
-            insPrezzo.setPromptText("Prezzo");
-
-            TextField insAutore = new TextField();
-            insAutore.setPromptText("Autore");
-
-            Button aggiungi = new Button("Aggiungi");
-
-            aggiungi.setOnAction(ev -> {
-
-                Libro nuovoLibro = new Libro(
-                        insCodice.getText(),
-                        insTitolo.getText(),
-                        insAnno.getText(),
-                        insPrezzo.getText(),
-                        insAutore.getText()
-                );
-
-                catalogo.inserisci(nuovoLibro);
-
-                stageLibro.close();
-            });
-
-            VBox root = new VBox(
-                    10,
-                    titolo,
-                    insCodice,
-                    insTitolo,
-                    insAnno,
-                    insPrezzo,
-                    insAutore,
-                    aggiungi
-            );
-
-            root.setAlignment(Pos.CENTER);
-
-            Scene scene = new Scene(root, 400, 400);
-
-            stageLibro.setScene(scene);
-            stageLibro.show();
-        });
-
-        // ---------------- FILM ----------------
-
-        film.setOnAction(e -> {
+            if(tipo == null) return;
 
             sceltaStage.close();
 
-            Stage stageFilm = new Stage();
-            stageFilm.setTitle("FILM");
-            stageFilm.initModality(Modality.APPLICATION_MODAL);
+            switch(tipo){
 
-            Label titolo = new Label("FILM");
-            titolo.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
+                case "Libro":
+                    apriLibro();
+                    break;
 
-            TextField insCodice = new TextField();
-            insCodice.setPromptText("Codice");
+                case "Film":
+                    apriFilm();
+                    break;
 
-            TextField insTitolo = new TextField();
-            insTitolo.setPromptText("Titolo");
-
-            TextField insAnno = new TextField();
-            insAnno.setPromptText("Anno");
-
-            TextField insPrezzo = new TextField();
-            insPrezzo.setPromptText("Prezzo");
-
-            TextField insRegista = new TextField();
-            insRegista.setPromptText("Regista");
-
-            Button aggiungi = new Button("Aggiungi");
-
-            aggiungi.setOnAction(ev -> {
-
-                Film nuovoFilm = new Film(
-                        insCodice.getText(),
-                        insTitolo.getText(),
-                        insAnno.getText(),
-                        insPrezzo.getText(),
-                        insRegista.getText()
-                );
-
-                catalogo.inserisci(nuovoFilm);
-
-                stageFilm.close();
-            });
-
-            VBox root = new VBox(
-                    10,
-                    titolo,
-                    insCodice,
-                    insTitolo,
-                    insAnno,
-                    insPrezzo,
-                    insRegista,
-                    aggiungi
-            );
-
-            root.setAlignment(Pos.CENTER);
-
-            Scene scene = new Scene(root, 400, 400);
-
-            stageFilm.setScene(scene);
-            stageFilm.show();
+                case "Videogioco":
+                    apriVideogioco();
+                    break;
+            }
         });
 
-        // ---------------- VIDEOGIOCO ----------------
-
-        videogioco.setOnAction(e -> {
-
-            sceltaStage.close();
-
-            Stage stageVideogioco = new Stage();
-            stageVideogioco.setTitle("VIDEOGIOCO");
-            stageVideogioco.initModality(Modality.APPLICATION_MODAL);
-
-            Label titolo = new Label("VIDEOGIOCO");
-            titolo.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
-
-            TextField insCodice = new TextField();
-            insCodice.setPromptText("Codice");
-
-            TextField insTitolo = new TextField();
-            insTitolo.setPromptText("Titolo");
-
-            TextField insAnno = new TextField();
-            insAnno.setPromptText("Anno");
-
-            TextField insPrezzo = new TextField();
-            insPrezzo.setPromptText("Prezzo");
-
-            TextField insPiattaforma = new TextField();
-            insPiattaforma.setPromptText("Piattaforma");
-
-            Button aggiungi = new Button("Aggiungi");
-
-            aggiungi.setOnAction(ev -> {
-
-                Videogioco nuovoVideogioco = new Videogioco(
-                        insCodice.getText(),
-                        insTitolo.getText(),
-                        insAnno.getText(),
-                        insPrezzo.getText(),
-                        insPiattaforma.getText()
-                );
-
-                catalogo.inserisci(nuovoVideogioco);
-
-                stageVideogioco.close();
-            });
-
-            VBox root = new VBox(
-                    10,
-                    titolo,
-                    insCodice,
-                    insTitolo,
-                    insAnno,
-                    insPrezzo,
-                    insPiattaforma,
-                    aggiungi
-            );
-
-            root.setAlignment(Pos.CENTER);
-
-            Scene scene = new Scene(root, 400, 400);
-
-            stageVideogioco.setScene(scene);
-            stageVideogioco.show();
-        });
-
-        Scene scene = new Scene(vbox, 200, 200);
-
+        Scene scene = new Scene(root, 250, 200);
         sceltaStage.setScene(scene);
         sceltaStage.show();
     }
+    public void apriLibro(){
 
+        Stage stage = new Stage();
+        stage.setTitle("Aggiungi Libro");
 
+        Label titolo = new Label("LIBRO");
+        titolo.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
+
+        TextField codice = new TextField();
+        codice.setPromptText("Codice");
+
+        TextField titoloField = new TextField();
+        titoloField.setPromptText("Titolo");
+
+        TextField anno = new TextField();
+        anno.setPromptText("Anno");
+
+        TextField prezzo = new TextField();
+        prezzo.setPromptText("Prezzo");
+
+        TextField autore = new TextField();
+        autore.setPromptText("Autore");
+
+        Button aggiungi = new Button("Aggiungi Libro");
+        aggiungi.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
+
+        aggiungi.setOnAction(e -> {
+
+            catalogo.inserisci(new Libro(
+                    codice.getText(),
+                    titoloField.getText(),
+                    anno.getText(),
+                    prezzo.getText(),
+                    autore.getText()
+            ));
+
+            stage.close();
+        });
+
+        VBox root = new VBox(12,
+                titolo,
+                codice,
+                titoloField,
+                anno,
+                prezzo,
+                autore,
+                aggiungi
+        );
+
+        root.setAlignment(Pos.CENTER);
+        root.setStyle("-fx-padding: 20;");
+
+        stage.setScene(new Scene(root, 350, 350));
+        stage.show();
+    }
+    public void apriFilm(){
+
+        Stage stage = new Stage();
+        stage.setTitle("Aggiungi Film");
+
+        Label titolo = new Label("FILM");
+        titolo.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
+
+        TextField codice = new TextField();
+        codice.setPromptText("Codice");
+
+        TextField titoloField = new TextField();
+        titoloField.setPromptText("Titolo");
+
+        TextField anno = new TextField();
+        anno.setPromptText("Anno");
+
+        TextField prezzo = new TextField();
+        prezzo.setPromptText("Prezzo");
+
+        TextField regista = new TextField();
+        regista.setPromptText("Regista");
+
+        Button aggiungi = new Button("Aggiungi Film");
+        aggiungi.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
+
+        aggiungi.setOnAction(e -> {
+
+            catalogo.inserisci(new Film(
+                    codice.getText(),
+                    titoloField.getText(),
+                    anno.getText(),
+                    prezzo.getText(),
+                    regista.getText()
+            ));
+
+            stage.close();
+        });
+
+        VBox root = new VBox(12,
+                titolo,
+                codice,
+                titoloField,
+                anno,
+                prezzo,
+                regista,
+                aggiungi
+        );
+
+        root.setAlignment(Pos.CENTER);
+        root.setStyle("-fx-padding: 20;");
+
+        stage.setScene(new Scene(root, 350, 350));
+        stage.show();
+    }
+    public void apriVideogioco(){
+
+        Stage stage = new Stage();
+        stage.setTitle("Aggiungi Videogioco");
+
+        Label titolo = new Label("VIDEOGIOCO");
+        titolo.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
+
+        TextField codice = new TextField();
+        codice.setPromptText("Codice");
+
+        TextField titoloField = new TextField();
+        titoloField.setPromptText("Titolo");
+
+        TextField anno = new TextField();
+        anno.setPromptText("Anno");
+
+        TextField prezzo = new TextField();
+        prezzo.setPromptText("Prezzo");
+
+        TextField piattaforma = new TextField();
+        piattaforma.setPromptText("Piattaforma");
+
+        Button aggiungi = new Button("Aggiungi Videogioco");
+        aggiungi.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
+
+        aggiungi.setOnAction(e -> {
+
+            catalogo.inserisci(new Videogioco(
+                    codice.getText(),
+                    titoloField.getText(),
+                    anno.getText(),
+                    prezzo.getText(),
+                    piattaforma.getText()
+            ));
+
+            stage.close();
+        });
+
+        VBox root = new VBox(12,
+                titolo,
+                codice,
+                titoloField,
+                anno,
+                prezzo,
+                piattaforma,
+                aggiungi
+        );
+
+        root.setAlignment(Pos.CENTER);
+        root.setStyle("-fx-padding: 20;");
+
+        stage.setScene(new Scene(root, 350, 350));
+        stage.show();
+    }
     //-------------------------------------------------------------------------------------------------------------
 
     public static void menu(){
