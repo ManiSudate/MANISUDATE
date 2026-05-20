@@ -150,36 +150,6 @@ public class Main extends Application {
     }
 
     //------------------------------------------------------------------------
-    private void animaColore(Button b, Color from, Color to) {
-
-        Timeline timeline = new Timeline(
-                new KeyFrame(Duration.ZERO,
-                        new KeyValue(b.styleProperty(),
-                                "-fx-background-color: " + toHex(from) + ";" +
-                                        "-fx-text-fill: #f5f6fa;" +
-                                        "-fx-background-radius: 10;" +
-                                        "-fx-font-size: 14px;" +
-                                        "-fx-padding: 12;")
-                ),
-                new KeyFrame(Duration.millis(180),
-                        new KeyValue(b.styleProperty(),
-                                "-fx-background-color: " + toHex(to) + ";" +
-                                        "-fx-text-fill: #f5f6fa;" +
-                                        "-fx-background-radius: 10;" +
-                                        "-fx-font-size: 14px;" +
-                                        "-fx-padding: 12;")
-                )
-        );
-
-        timeline.play();
-    }
-    private String toHex(Color c){
-        return String.format("#%02X%02X%02X",
-                (int)(c.getRed()*255),
-                (int)(c.getGreen()*255),
-                (int)(c.getBlue()*255));
-    }
-
     public void salvaElementi(){
         catalogo.salvaCSV("catalogo.csv");
         lista.getItems().add("Elementi salvati con successo!");
