@@ -16,7 +16,9 @@ import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 public class Main extends Application {
+
     static BST<ElementoCatalogo> catalogo = new BST<>();
+
     public static void main(String[] args) {
         catalogo.caricaCSV();
         launch(args);
@@ -150,6 +152,7 @@ public class Main extends Application {
     }
 
     //------------------------------------------------------------------------
+
     public void salvaElementi(){
         catalogo.salvaCSV("catalogo.csv");
         lista.getItems().add("Elementi salvati con successo!");
@@ -173,7 +176,6 @@ public class Main extends Application {
         }
         lista.setVisible(true);
     }
-
     public void eliminaElemento(){
         String codice = fieldCerca.getText();
 
@@ -188,7 +190,6 @@ public class Main extends Application {
             lista.getItems().add("Elemento non trovato");
         }
     }
-
     public void aggiungiElementi(){
 
         Stage sceltaStage = new Stage();
@@ -400,7 +401,8 @@ public class Main extends Application {
         stage.setScene(new Scene(root, 350, 350));
         stage.show();
     }
-    //-------------------------------------------------------------------------------------------------------------
+
+    //------------------------------------------------------------------------
 
     public static void menu(){
         Scanner s = new Scanner(System.in);
@@ -468,8 +470,6 @@ public class Main extends Application {
         }
         s.close();
     }
-
-
     public static void cerca(){
         Scanner s = new Scanner(System.in);
         System.out.print("Inserisci codice: ");
