@@ -1,155 +1,35 @@
 package it.edu.cannizzaro.quartab25.catalogo;
 import java.util.Scanner;
 import javafx.application.Application;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
-import javafx.animation.TranslateTransition;
-import javafx.util.Duration;
-import javafx.animation.*;
-import javafx.scene.paint.Color;
-import javafx.util.Duration;
 
 public class Main extends Application {
 
     static BST<ElementoCatalogo> catalogo = new BST<>();
 
-    public static void main(String[] args) {
-        catalogo.caricaCSV();
-        launch(args);
-    }
-
+    private final String USERNAME_ADMIN = "admin";
+    private final String PASSWORD_ADMIN = "1234";
     public ListView<String> lista = new ListView<>();
     TextField fieldCerca = new TextField();
 
-    @Override
-    public void start(Stage stage){
-
-        stage.setTitle("Catalogo Multimediale");
-
-        // ---------------- TITOLO ----------------
-        Label titolo = new Label("CATALOGO");
-        titolo.setStyle("""
-            -fx-font-size: 24px;
-            -fx-font-weight: bold;
-            -fx-text-fill: #2c3e50;
-            -fx-padding: 10 0 20 0;
-            """);
-
-        // ---------------- SEARCH ----------------
-        fieldCerca.setPromptText("Cerca per codice...");
-        fieldCerca.setMaxWidth(Double.MAX_VALUE);
-
-        fieldCerca.setStyle("""
-            -fx-background-radius: 6;
-            -fx-padding: 8;
-            -fx-border-color: #dcdcdc;
-            -fx-border-radius: 6;
-            """);
-
-        // ---------------- LISTA ----------------
-        lista.setPrefSize(600, 450);
-        lista.setFixedCellSize(55);
-
-        lista.setStyle("""
-            -fx-background-color: #f5f6fa;
-            -fx-border-color: #dcdcdc;
-            -fx-border-radius: 10;
-            -fx-background-radius: 10;
-            -fx-font-size: 14px;
-            """);
-
-        // ---------------- BOTTONI ----------------
-        Button btnAggiungi = new Button("Aggiungi");
-        Button btnCerca = new Button("Cerca");
-        Button btnVisualizza = new Button("Visualizza");
-        Button btnElimina = new Button("Elimina");
-        Button btnSalva = new Button("Salva");
-
-        Button[] buttons = {btnAggiungi, btnCerca, btnVisualizza, btnElimina, btnSalva};
-
-        for(Button b : buttons){
-
-            b.setMaxWidth(Double.MAX_VALUE);
-
-            String base = """
-                -fx-background-color: transparent;
-                -fx-text-fill: #2c3e50;
-                -fx-font-size: 14px;
-                -fx-padding: 10;
-                -fx-background-radius: 8;
-                -fx-cursor: hand;
-                """;
-
-            String hover = """
-                -fx-background-color: #e3eaf5;
-                -fx-text-fill: #2c3e50;
-                -fx-font-size: 14px;
-                -fx-padding: 10;
-                -fx-background-radius: 8;
-                """;
-
-            b.setStyle(base);
-
-            b.setOnMouseEntered(e -> {
-                b.setStyle(hover);
-                b.setTranslateX(3);
-            });
-
-            b.setOnMouseExited(e -> {
-                b.setStyle(base);
-                b.setTranslateX(0);
-            });
-        }
-
-        // ---------------- EVENTI ----------------
-        btnAggiungi.setOnAction(e -> aggiungiElementi());
-        btnCerca.setOnAction(e -> cercaElementi());
-        btnVisualizza.setOnAction(e -> visualizzaElementi());
-        btnElimina.setOnAction(e -> eliminaElemento());
-        btnSalva.setOnAction(e -> salvaElementi());
-
-        // ---------------- SIDEBAR ----------------
-        VBox sidebar = new VBox(15,
-                titolo,
-                fieldCerca,
-                btnCerca,
-                btnAggiungi,
-                btnVisualizza,
-                btnElimina,
-                btnSalva
-        );
-
-        sidebar.setStyle("""
-            -fx-background-color: #f0f4f8;
-            -fx-padding: 20;
-            """);
-
-        sidebar.setPrefWidth(220);
-
-        // ---------------- CONTENT ----------------
-        VBox content = new VBox(15, lista);
-
-        content.setStyle("""
-            -fx-background-color: #ffffff;
-            -fx-padding: 20;
-            """);
-
-        // ---------------- ROOT ----------------
-        BorderPane root = new BorderPane();
-        root.setLeft(sidebar);
-        root.setCenter(content);
-
-        Scene scene = new Scene(root, 950, 550);
-
-        stage.setScene(scene);
-        stage.show();
+    public static void main(String[] args) {
+        catalogo.caricaCSV();
+        launch(args);
+        catalogo.salvaCSV("catalogo.csv");
     }
+
+    @Override
+    public void start(Stage stage) {
+        scegliRuolo(stage);
+    }
+
 
     //------------------------------------------------------------------------
 
@@ -235,6 +115,25 @@ public class Main extends Application {
         Scene scene = new Scene(root, 250, 200);
         sceltaStage.setScene(scene);
         sceltaStage.show();
+    }
+    public void compraElemento(){
+        String codice = fieldCerca.getText();
+
+        ElementoCatalogo trovato =
+                catalogo.cerca(new Libro(codice,"","","",""));
+
+        lista.getItems().clear();
+
+        if(trovato != null){
+
+            lista.getItems().add(
+                    "Hai acquistato: " +
+                            trovato.stampaEtichettaFX()
+            );
+
+        }else{
+            lista.getItems().add("Elemento non trovato");
+        }
     }
     public void apriLibro(){
 
@@ -400,6 +299,265 @@ public class Main extends Application {
 
         stage.setScene(new Scene(root, 350, 350));
         stage.show();
+    }
+    public void scegliRuolo(Stage stage){
+
+        Label titolo = new Label("CHI SEI?");
+        titolo.setStyle("""
+            -fx-font-size: 24px;
+            -fx-font-weight: bold;
+            """);
+
+        Button utente = new Button("Utente");
+        Button admin = new Button("Admin");
+
+        utente.setPrefWidth(200);
+        admin.setPrefWidth(200);
+
+        VBox root = new VBox(20, titolo, utente, admin);
+
+        root.setAlignment(Pos.CENTER);
+
+        root.setStyle("""
+            -fx-background-color: #f5f6fa;
+            """);
+
+        Scene scene = new Scene(root, 400, 300);
+
+        stage.setScene(scene);
+        stage.show();
+
+        // UTENTE
+        utente.setOnAction(e -> {
+            apriCatalogo(stage, false);
+        });
+
+        // ADMIN
+        admin.setOnAction(e -> {
+            loginAdmin(stage);
+        });
+    }
+    public void loginAdmin(Stage stage){
+
+        Label titolo = new Label("LOGIN ADMIN");
+
+        titolo.setStyle("""
+            -fx-font-size: 22px;
+            -fx-font-weight: bold;
+            """);
+
+        TextField utente = new TextField();
+        utente.setPromptText("Username");
+
+        PasswordField password = new PasswordField();
+        password.setPromptText("Password");
+
+        Label errore = new Label();
+
+        Button login = new Button("Accedi");
+        Button back = new Button("←");
+
+        back.setStyle("""
+        -fx-background-color: transparent;
+        -fx-font-size: 18px;
+        -fx-cursor: hand;
+        """);
+
+        back.setOnAction(e -> {
+            scegliRuolo(stage);
+        });
+
+        HBox topBar = new HBox(10, back, titolo);
+        topBar.setAlignment(Pos.CENTER_LEFT);
+
+        VBox root = new VBox(20,
+                topBar,
+                utente,
+                password,
+                login,
+                errore
+        );
+
+        root.setAlignment(Pos.CENTER);
+
+        root.setStyle("""
+            -fx-background-color: #f5f6fa;
+            -fx-padding: 30;
+            """);
+
+        utente.setMaxWidth(200);
+        password.setMaxWidth(200);
+        login.setPrefWidth(200);
+
+        Scene scene = new Scene(root, 400, 300);
+
+        stage.setScene(scene);
+
+        login.setOnAction(e -> {
+
+            String user = utente.getText();
+            String pass = password.getText();
+
+            if(user.equals(USERNAME_ADMIN)
+                    && pass.equals(PASSWORD_ADMIN)){
+
+                apriCatalogo(stage, true);
+
+            }else{
+
+                errore.setText("Username o password errati");
+                errore.setStyle("-fx-text-fill: red;");
+            }
+        });
+    }
+    public void apriCatalogo(Stage stage, boolean admin){
+
+        Button back = new Button("←");
+
+        back.setStyle("""
+        -fx-background-color: transparent;
+        -fx-font-size: 18px;
+        -fx-cursor: hand;
+        """);
+        back.setOnAction(e -> {
+            scegliRuolo(stage);
+        });
+
+        stage.setTitle("Catalogo Multimediale");
+
+        // ---------------- TITOLO ----------------
+        Label titolo = new Label("CATALOGO");
+        titolo.setStyle("""
+            -fx-font-size: 24px;
+            -fx-font-weight: bold;
+            -fx-text-fill: #2c3e50;
+            -fx-padding: 10 0 20 0;
+            """);
+
+        // ---------------- CERCA ----------------
+        fieldCerca.setPromptText("Cerca per codice...");
+        fieldCerca.setMaxWidth(Double.MAX_VALUE);
+
+        fieldCerca.setStyle("""
+            -fx-background-radius: 6;
+            -fx-padding: 8;
+            -fx-border-color: #dcdcdc;
+            -fx-border-radius: 6;
+            """);
+
+        // ---------------- LISTA ----------------
+        lista.setPrefSize(600, 450);
+        lista.setFixedCellSize(55);
+
+        lista.setStyle("""
+            -fx-background-color: #f5f6fa;
+            -fx-border-color: #dcdcdc;
+            -fx-border-radius: 10;
+            -fx-background-radius: 10;
+            -fx-font-size: 14px;
+            """);
+
+        // ---------------- BOTTONI ----------------
+        Button btnAggiungi = new Button("Aggiungi");
+        Button btnCerca = new Button("Cerca");
+        Button btnVisualizza = new Button("Visualizza");
+        Button btnElimina = new Button("Elimina");
+        Button btnSalva = new Button("Salva");
+        Button btnCompra = new Button("Compra");
+        if(!admin){
+            btnAggiungi.setVisible(false);
+            btnElimina.setVisible(false);
+            btnSalva.setVisible(false);
+        } else {
+            btnCompra.setVisible(false);
+        }
+
+        Button[] buttons = {btnAggiungi, btnCerca, btnVisualizza, btnElimina, btnSalva, btnCompra};
+
+        for(Button b : buttons){
+
+            b.setMaxWidth(Double.MAX_VALUE);
+
+            String base = """
+                -fx-background-color: transparent;
+                -fx-text-fill: #2c3e50;
+                -fx-font-size: 14px;
+                -fx-padding: 10;
+                -fx-background-radius: 8;
+                -fx-cursor: hand;
+                """;
+
+            String hover = """
+                -fx-background-color: #e3eaf5;
+                -fx-text-fill: #2c3e50;
+                -fx-font-size: 14px;
+                -fx-padding: 10;
+                -fx-background-radius: 8;
+                """;
+
+            b.setStyle(base);
+
+            b.setOnMouseEntered(e -> {
+                b.setStyle(hover);
+                b.setTranslateX(3);
+            });
+
+            b.setOnMouseExited(e -> {
+                b.setStyle(base);
+                b.setTranslateX(0);
+            });
+        }
+
+        // ---------------- EVENTI ----------------
+        btnAggiungi.setOnAction(e ->    aggiungiElementi()      );
+        btnCerca.setOnAction(e ->       cercaElementi()         );
+        btnVisualizza.setOnAction(e ->  visualizzaElementi()    );
+        btnElimina.setOnAction(e ->     eliminaElemento()       );
+        btnSalva.setOnAction(e ->       salvaElementi()         );
+        btnCompra.setOnAction(e ->      compraElemento()        );
+
+        // ---------------- SIDEBAR ----------------
+        VBox sidebar = new VBox(15,
+                back,
+                titolo,
+                fieldCerca,
+                btnCerca,
+                btnAggiungi,
+                btnVisualizza,
+                btnCompra,
+                btnElimina,
+                btnSalva
+        );
+        // ---
+
+        sidebar.setStyle("""
+            -fx-background-color: #f0f4f8;
+            -fx-padding: 20;
+            """);
+        sidebar.setPrefWidth(220);
+
+        // ------------- CONTENT ----------------
+
+
+        VBox content = new VBox(15, lista);
+        content.setStyle("""
+            -fx-background-color: #ffffff;
+            -fx-padding: 20;
+            """);
+
+        // ---------------- ROOT ----------------
+        BorderPane root = new BorderPane();
+        root.setLeft(sidebar);
+        root.setCenter(content);
+
+        Scene scene = new Scene(root, 950, 550);
+
+        stage.setScene(scene);
+        stage.show();
+
+
+
+
     }
 
     //------------------------------------------------------------------------

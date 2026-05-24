@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3b924759-5054-474e-be8c-a33976470c55" name="Changes" comment="catalogo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/ElementoCatalogo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/ElementoCatalogo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +34,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:ManiSudate/MANISUDATE.git&quot;,
-    &quot;accountId&quot;: &quot;968fdf68-c57e-4ec6-9433-9d3ca21b301c&quot;
+    &quot;url&quot;: &quot;https://github.com/ManiSudate/MANISUDATE.git&quot;,
+    &quot;accountId&quot;: &quot;ea674b5f-fd49-4b52-b6bf-0eb14d3bf475&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -41,6 +44,65 @@
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000123668119059" />
+      <entry key="S5" value="1.0190687968972583" />
+      <entry key="S10" value="1.28342739800627" />
+      <entry key="S30" value="3.3457093897059265" />
+      <entry key="S60" value="5.266921789339047" />
+      <entry key="M2" value="6.97934006221372" />
+      <entry key="M5" value="9.402497882608582" />
+      <entry key="M10" value="11.625977175345906" />
+      <entry key="M15" value="12.879392979080317" />
+      <entry key="M30" value="14.595887161592193" />
+      <entry key="H1" value="15.69391437370204" />
+      <entry key="H2" value="16.318244085605215" />
+      <entry key="H4" value="16.651572816681284" />
+      <entry key="D1" value="16.94084715746966" />
+      <entry key="W1" value="16.99152266084834" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.3804102670084567E-96" />
+      <entry key="MS500" value="6.737367487752612E-20" />
+      <entry key="S2" value="1.969545003358359E-5" />
+      <entry key="S5" value="0.022560269888634167" />
+      <entry key="S10" value="0.31183055348905714" />
+      <entry key="S30" value="2.8440771109873637" />
+      <entry key="S60" value="5.820440279619161" />
+      <entry key="M2" value="9.07745614757133" />
+      <entry key="M5" value="13.891355741503462" />
+      <entry key="M10" value="17.83772449146182" />
+      <entry key="M15" value="19.882054845142367" />
+      <entry key="M30" value="22.52578648829051" />
+      <entry key="H1" value="24.141256367903466" />
+      <entry key="H2" value="25.03763141578348" />
+      <entry key="H4" value="25.51021742499942" />
+      <entry key="D1" value="25.91714445569248" />
+      <entry key="W1" value="25.988133078874938" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.7900413118633771" />
+      <entry key="MS500" value="0.9539595505475581" />
+      <entry key="S2" value="0.9883078988039666" />
+      <entry key="S5" value="1.0323450025284417" />
+      <entry key="S10" value="1.5613398641123186" />
+      <entry key="S30" value="6.098136381436068" />
+      <entry key="S60" value="10.99979224641954" />
+      <entry key="M2" value="15.991696489775135" />
+      <entry key="M5" value="23.253926038883186" />
+      <entry key="M10" value="29.437543763019253" />
+      <entry key="M15" value="32.74181998505887" />
+      <entry key="M30" value="37.110428760927775" />
+      <entry key="H1" value="39.82910773154873" />
+      <entry key="H2" value="41.35272129501278" />
+      <entry key="H4" value="42.16018072994823" />
+      <entry key="D1" value="42.85771870461258" />
+      <entry key="W1" value="42.97961663666364" />
+    </decayedShown>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="AISelfReview" />
@@ -56,39 +118,39 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Catalogo.executor": "Run",
-    "Application.Login.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Unnamed.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.preview.features.used": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/filippo.licocci/Documents/projects/JAVA",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.20344828",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Catalogo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Login.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/filippo.licocci/Documents/projects/JAVA&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.20344828&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="it.edu.cannizzaro.quartab25.AMBULATORIO" />
@@ -120,7 +182,8 @@
       <option name="presentableId" value="Default" />
       <updated>1770725505829</updated>
       <workItem from="1779537774289" duration="147000" />
-      <workItem from="1779537938124" duration="65000" />
+      <workItem from="1779537938124" duration="249000" />
+      <workItem from="1779633273724" duration="2414000" />
     </task>
     <task id="LOCAL-00001" summary="ASAS">
       <option name="closed" value="true" />
@@ -210,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779277278312</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="catalogo">
+      <option name="closed" value="true" />
+      <created>1779538091287</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1779538091287</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
