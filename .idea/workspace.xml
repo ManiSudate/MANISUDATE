@@ -1,14 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Catalogo" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b924759-5054-474e-be8c-a33976470c55" name="Changes" comment="catalogo">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JAVA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/Circonferenza/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/Circonferenza/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Coda.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Coda.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Medico.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Medico.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Paziente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Paziente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Prenotazione.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/ambulatorio/Prenotazione.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/array5persone/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/array5persone/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/array5persone/Persona.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/array5persone/Persona.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/BST$Nodo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/BST$Nodo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/BST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/BST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Catalogabile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Catalogabile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/ElementoCatalogo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/ElementoCatalogo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Film.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Libro.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Libro.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/ToCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/ToCSV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Videogioco.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/catalogo/Videogioco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/classe/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/classe/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/classe/Persona.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/classe/Persona.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/classe/Studente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/classe/Studente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/classeastratta/Animale.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/classeastratta/Animale.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/classeastratta/Cane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/classeastratta/Cane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/classeastratta/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/classeastratta/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/cubo/Cubo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/cubo/Cubo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/cubo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/cubo/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/cubo/Parallelepipedo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/cubo/Parallelepipedo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/cubo/Quadrato.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/cubo/Quadrato.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/cubo/Rettangolo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/cubo/Rettangolo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/giorno/Giorno.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/giorno/Giorno.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/login/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/login/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/magazzino/Acquirente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/magazzino/Acquirente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/magazzino/Cittadino.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/magazzino/Cittadino.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/magazzino/Colors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/magazzino/Colors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/magazzino/Magazzino.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/magazzino/Magazzino.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/magazzino/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/magazzino/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/magazzino/Pezzo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/magazzino/Pezzo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/persona/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/persona/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/persona/Persona.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/persona/Persona.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/rubrica/Contatto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/rubrica/Contatto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/rubrica/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/rubrica/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/rubrica/Rubrica.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/rubrica/Rubrica.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/tombolaporcodue/Cartella.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/tombolaporcodue/Cartella.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/tombolaporcodue/Casella.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/tombolaporcodue/Casella.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/tombolaporcodue/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/tombolaporcodue/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/tombolaporcodue/Tabellone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JAVA/it/edu/cannizzaro/quartab25/tombolaporcodue/Tabellone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,60 +99,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000123668119059" />
-      <entry key="S5" value="1.0190687968972583" />
-      <entry key="S10" value="1.28342739800627" />
-      <entry key="S30" value="3.3457093897059265" />
-      <entry key="S60" value="5.266921789339047" />
-      <entry key="M2" value="6.97934006221372" />
-      <entry key="M5" value="9.402497882608582" />
-      <entry key="M10" value="11.625977175345906" />
-      <entry key="M15" value="12.879392979080317" />
-      <entry key="M30" value="14.595887161592193" />
-      <entry key="H1" value="15.69391437370204" />
-      <entry key="H2" value="16.318244085605215" />
-      <entry key="H4" value="16.651572816681284" />
-      <entry key="D1" value="16.94084715746966" />
-      <entry key="W1" value="16.99152266084834" />
+      <entry key="MS500" value="1.0001064158007247" />
+      <entry key="S2" value="1.1015667437965286" />
+      <entry key="S5" value="1.4005904685764616" />
+      <entry key="S10" value="1.6329221702133916" />
+      <entry key="S30" value="1.861089626822777" />
+      <entry key="S60" value="1.9987808536939358" />
+      <entry key="M2" value="2.453186134578595" />
+      <entry key="M5" value="4.825755464094964" />
+      <entry key="M10" value="8.533269277267632" />
+      <entry key="M15" value="11.039962893653803" />
+      <entry key="M30" value="14.883472859596173" />
+      <entry key="H1" value="17.574461745198207" />
+      <entry key="H2" value="19.182001565315378" />
+      <entry key="H4" value="20.062778659618996" />
+      <entry key="D1" value="20.839701596450684" />
+      <entry key="W1" value="20.976997572352783" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.3804102670084567E-96" />
-      <entry key="MS500" value="6.737367487752612E-20" />
-      <entry key="S2" value="1.969545003358359E-5" />
-      <entry key="S5" value="0.022560269888634167" />
-      <entry key="S10" value="0.31183055348905714" />
-      <entry key="S30" value="2.8440771109873637" />
-      <entry key="S60" value="5.820440279619161" />
-      <entry key="M2" value="9.07745614757133" />
-      <entry key="M5" value="13.891355741503462" />
-      <entry key="M10" value="17.83772449146182" />
-      <entry key="M15" value="19.882054845142367" />
-      <entry key="M30" value="22.52578648829051" />
-      <entry key="H1" value="24.141256367903466" />
-      <entry key="H2" value="25.03763141578348" />
-      <entry key="H4" value="25.51021742499942" />
-      <entry key="D1" value="25.91714445569248" />
-      <entry key="W1" value="25.988133078874938" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="2.7883262453193497E-176" />
+      <entry key="S2" value="2.2944218664842547E-44" />
+      <entry key="S5" value="7.389153789595932E-18" />
+      <entry key="S10" value="5.71309274781985E-9" />
+      <entry key="S30" value="0.00514247742240611" />
+      <entry key="S60" value="0.16156235060563076" />
+      <entry key="M2" value="1.0426918604737418" />
+      <entry key="M5" value="5.1935780245840855" />
+      <entry key="M10" value="11.381914479226968" />
+      <entry key="M15" value="15.4662806878402" />
+      <entry key="M30" value="21.583385736230742" />
+      <entry key="H1" value="25.770668206999222" />
+      <entry key="H2" value="28.23803282587131" />
+      <entry key="H4" value="29.579793188840878" />
+      <entry key="D1" value="30.75763376885934" />
+      <entry key="W1" value="30.965234581402612" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7900413118633771" />
-      <entry key="MS500" value="0.9539595505475581" />
-      <entry key="S2" value="0.9883078988039666" />
-      <entry key="S5" value="1.0323450025284417" />
-      <entry key="S10" value="1.5613398641123186" />
-      <entry key="S30" value="6.098136381436068" />
-      <entry key="S60" value="10.99979224641954" />
-      <entry key="M2" value="15.991696489775135" />
-      <entry key="M5" value="23.253926038883186" />
-      <entry key="M10" value="29.437543763019253" />
-      <entry key="M15" value="32.74181998505887" />
-      <entry key="M30" value="37.110428760927775" />
-      <entry key="H1" value="39.82910773154873" />
-      <entry key="H2" value="41.35272129501278" />
-      <entry key="H4" value="42.16018072994823" />
-      <entry key="D1" value="42.85771870461258" />
-      <entry key="W1" value="42.97961663666364" />
+      <entry key="MS100" value="0.9659363289248456" />
+      <entry key="MS500" value="0.9931970106084893" />
+      <entry key="S2" value="1.09937880114261" />
+      <entry key="S5" value="1.3991762745076355" />
+      <entry key="S10" value="1.6320055981723307" />
+      <entry key="S30" value="1.865745765938312" />
+      <entry key="S60" value="2.1584002809629337" />
+      <entry key="M2" value="3.4899438029041527" />
+      <entry key="M5" value="10.006256389402711" />
+      <entry key="M10" value="19.899917622723674" />
+      <entry key="M15" value="26.492081871243766" />
+      <entry key="M30" value="36.45673159435212" />
+      <entry key="H1" value="43.33900832035141" />
+      <entry key="H2" value="47.41665948882156" />
+      <entry key="H4" value="49.64079867645442" />
+      <entry key="D1" value="51.59702726635982" />
+      <entry key="W1" value="51.942187822723" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -156,6 +207,11 @@
       <recent name="it.edu.cannizzaro.quartab25.AMBULATORIO" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="maven javafx:jlink" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="Catalogo" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="it.edu.cannizzaro.quartab25.catalogo.Main" />
@@ -183,7 +239,11 @@
       <updated>1770725505829</updated>
       <workItem from="1779537774289" duration="147000" />
       <workItem from="1779537938124" duration="249000" />
-      <workItem from="1779633273724" duration="2414000" />
+      <workItem from="1779633273724" duration="3801000" />
+      <workItem from="1779637096147" duration="279000" />
+      <workItem from="1779637391057" duration="183000" />
+      <workItem from="1779897706732" duration="97000" />
+      <workItem from="1779898381012" duration="343000" />
     </task>
     <task id="LOCAL-00001" summary="ASAS">
       <option name="closed" value="true" />
@@ -281,7 +341,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779538091287</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="catalogo">
+      <option name="closed" value="true" />
+      <created>1779635956300</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1779635956300</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,6 +387,16 @@
           <properties class="java.lang.IllegalArgumentException" package="java.lang" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/catalogo/Main.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/it/edu/cannizzaro/quartab25/ambulatorio/Main.java</url>
+          <line>158</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

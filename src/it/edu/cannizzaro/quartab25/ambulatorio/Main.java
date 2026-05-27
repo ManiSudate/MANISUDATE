@@ -5,7 +5,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+
     private static final String FILE_PRENOTAZIONI = "prenotazioni.dat";
+    static Scanner s = new Scanner(System.in);
+    static ArrayList<Medico> medici = caricaPrenotazioni();
+
+
     public static void salvaPrenotazioni(List<Medico> medici) {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FILE_PRENOTAZIONI))) {
             out.writeObject(new ArrayList<>(medici));
@@ -21,16 +26,13 @@ public class Main {
             return new ArrayList<>();
         }
     }
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        ArrayList<Medico> medici = caricaPrenotazioni();
 
-        if (medici.isEmpty()) {
-            medici.add(new Medico("Younan", "Nowzaradan", "Chirurgia vascolare"));
-            medici.add(new Medico("Umberto", "Veronesi", "Oncologo"));
-            medici.add(new Medico("Anthony", "Fauci", "Malattie infettive"));
-            salvaPrenotazioni(medici);
-        }
+    public static void main(String[] args) {
+        medici();
+        menu();
+    }
+
+    public static void menu(){
         int scelta;
         do {
             System.out.println("\n--- POLIAMBULATORIO ---");
@@ -151,5 +153,14 @@ public class Main {
                     System.out.println("Scelta non valida.");
             }
         } while (scelta != 0);
+
+    }
+    public static void medici(){
+        if (medici.isEmpty()) {
+            medici.add(new Medico("Younan", "Nowzaradan", "Chirurgia vascolare"));
+            medici.add(new Medico("Umberto", "Veronesi", "Oncologo"));
+            medici.add(new Medico("Anthony", "Fauci", "Malattie infettive"));
+            salvaPrenotazioni(medici);
+        }
     }
 }

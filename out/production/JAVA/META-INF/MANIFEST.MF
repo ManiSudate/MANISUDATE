@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: it.edu.cannizzaro.quartab25.catalogo.Main
+Class-Path: C:\Users\Fil\Documents\projects\MANISUDATE\out\production\JA
+ VA\it\edu\cannizzaro\quartab25\catalogo
+
